@@ -128,4 +128,10 @@ git subtree add --prefix {local dir} {repo URL} {remote branch} --squash
 git subtree pull --prefix {local dir} {repo URL} {remote branch} --squash
 
 # git submodule
+
+git update-ref -d refs/remotes/origin/release
+
+git pack-refs
+
+cat .git/packed-refs
 ```

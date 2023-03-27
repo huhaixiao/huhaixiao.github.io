@@ -12,6 +12,7 @@ export const Root = () => {
     <StrictMode>
       <Suspense fallback={<Loading />}>
         <ThemeContextProvider>
+          <span>this is root</span>
           <Outlet />
         </ThemeContextProvider>
       </Suspense>

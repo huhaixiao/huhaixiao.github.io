@@ -1,0 +1,3 @@
+# Another tip! If your project isn’t ready to format, say, HTML files yet, add *.html.
+*.html
+node_modules

@@ -1,0 +1,32 @@
+{
+  "recommendations": [
+    // EditorConfig for VS Code
+    "editorconfig.editorconfig",
+    // ESLint
+    "dbaeumer.vscode-eslint",
+    // Prettier
+    "esbenp.prettier-vscode",
+    // Auto Rename Tag
+    "formulahendry.auto-rename-tag",
+    // Import Cost
+    "wix.vscode-import-cost",
+    // LeetCode
+    "leetcode.vscode-leetcode",
+    // Markdown All in One
+    "yzhang.markdown-all-in-one",
+    // vscode-icons
+    "vscode-icons-team.vscode-icons",
+    // vscode-styled-components
+    "styled-components.vscode-styled-components",
+    // Git History
+    "donjayamanne.githistory",
+    // Better Comments
+    "aaron-bond.better-comments",
+    // Bookmarks
+    "alefragnani.bookmarks",
+    // Auto Import
+    "steoates.autoimport",
+    // Todo Tree
+    "gruntfuggly.todo-tree",
+  ]
+}

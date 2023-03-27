@@ -1,0 +1,3 @@
+```ts
+React.memo()
+```

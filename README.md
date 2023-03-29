@@ -1,3 +1,11 @@
+# skills 
+
+- git subtree
+- git submodule
+- Micro Frontends
+  - qiankun
+  - Module Federation
+
 - GitHub CI/CD
   - https://docs.github.com/en/actions/quickstart#introduction
 - Module Federation|webpack

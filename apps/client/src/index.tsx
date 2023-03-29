@@ -5,3 +5,4 @@ import "./normalize.css";
 
 const root = createRoot(document.querySelector("#app") as HTMLElement);
 root.render(<App />);
+console.log('wft')

@@ -5,7 +5,6 @@ import Config from "./webpack.common";
 
 const config: webpack.Configuration = merge(Config, {
   mode: "production",
-  entry: "./src/app.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash:8].js",

@@ -34,7 +34,7 @@ export const Contact = () => {
         setIsDark((state) => !state);
       }}
     >
-      contact {state}
+      toggle
     </Button>
   );
 };

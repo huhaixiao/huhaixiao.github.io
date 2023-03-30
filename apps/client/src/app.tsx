@@ -14,7 +14,7 @@ export const App = () => {
         loader: rootLoader,
         children: [
           {
-            path: "contact",
+            path: "/",
             element: <Contact />,
             loader: contactLoader,
           },

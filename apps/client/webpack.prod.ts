@@ -1,10 +1,22 @@
 import * as path from "path";
 import * as webpack from "webpack";
 import { merge } from "webpack-merge";
+import CopyPlugin from "copy-webpack-plugin";
 import Config from "./webpack.common";
 
 const config: webpack.Configuration = merge(Config, {
   mode: "production",
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: "public", to: "" },
+        { from: ".github", to: ".github" },
+      ],
+      options: {
+        concurrency: 100,
+      },
+    }),
+  ],
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash:8].js",
@@ -14,13 +26,16 @@ const config: webpack.Configuration = merge(Config, {
     rules: [
       {
         test: /\.css/,
-        exclude: /node_modules/,
+        // exclude: /node_modules/,
         use: [
           {
             loader: "style-loader",
           },
           {
             loader: "css-loader",
+          },
+          {
+            loader: "postcss-loader",
           },
         ],
       },
@@ -29,17 +44,17 @@ const config: webpack.Configuration = merge(Config, {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
+            loader: "babel-loader",
             options: {
               presets: [
                 ["@babel/preset-env"],
                 ["@babel/preset-react"],
-                ["@babel/preset-typescript"]
-              ]
-            }
-          }
-        ]
-      }
+                ["@babel/preset-typescript"],
+              ],
+            },
+          },
+        ],
+      },
     ],
   },
 });

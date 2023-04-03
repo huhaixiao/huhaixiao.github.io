@@ -2,8 +2,8 @@
 // https://beta.reactjs.org/reference/react/Suspense
 import React from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { Root, loader as rootLoader } from "./routes/root";
-import { Contact, loader as contactLoader } from "./routes/contact";
+import { Root } from "./routes/root";
+import { Store } from "./routes/contact";
 
 export const App = () => {
   const router = createHashRouter(
@@ -11,19 +11,14 @@ export const App = () => {
       {
         path: "/",
         element: <Root />,
-        loader: rootLoader,
         children: [
           {
             path: "/",
-            element: <Contact />,
-            loader: contactLoader,
+            element: <Store />,
           },
         ],
       },
-    ],
-    {
-      // basename: "app",
-    }
+    ]
   );
 
   return <RouterProvider router={router} />;

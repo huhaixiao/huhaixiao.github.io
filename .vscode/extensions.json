@@ -28,5 +28,9 @@
     "steoates.autoimport",
     // Todo Tree
     "gruntfuggly.todo-tree",
+    // tailwindcss
+    "bradlc.vscode-tailwindcss",
+    // Postcss
+    "csstools.postcss"
   ]
 }

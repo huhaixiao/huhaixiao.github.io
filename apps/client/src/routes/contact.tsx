@@ -1,57 +1,52 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { useToggle, useLatest } from "@huhaixiao/react-hooks";
-import { Button } from "@huhaixiao/react-components";
-import { useThemeContext } from "../features/theme";
+import React, { useEffect, useLayoutEffect, useState } from "react";
+import { Switch } from "antd-mobile";
+import { forceDarkOn, forceLightOn } from "../utils/dark-theme";
 
-export const Contact = () => {
-  const { isDark, setIsDark } = useThemeContext();
-  const [state, { setLeft, setRight, toggle, set }] = useToggle(
-    "male",
-    "female"
-  );
-  const [rand, setRand] = useState("");
-  const latestRand = useLatest(rand);
+export const Store = () => {
+  const [isDark, setIsDark] = useState(false);
 
-  const showLatestRand = useCallback(() => {
-    console.log(latestRand.current);
-  }, []);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setRand(Math.random().toString().slice(0, 8));
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
+  useLayoutEffect(() => {
+    setIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches);
   }, []);
 
   return (
-    <Button
-      onClick={() => {
-        toggle();
-        showLatestRand();
-        setIsDark((state) => !state);
-      }}
-    >
-      toggle
-    </Button>
+    <>
+      <Switch
+        checked={isDark}
+        checkedText="dark"
+        uncheckedText="light"
+        onChange={(checked) => {
+          setIsDark(checked);
+          if (checked) {
+            forceDarkOn();
+          } else {
+            forceLightOn();
+          }
+        }}
+      />
+      <div className="text-black dark:text-white grid grid-rows-layout">
+        <div className="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
+          <div>
+            <span className="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
+              <svg
+                className="h-6 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              ></svg>
+            </span>
+          </div>
+          <h3 className="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">
+            Writes Upside-Down
+          </h3>
+          <p className="text-slate-500 dark:text-slate-400 mt-2 text-sm">
+            The Zero Gravity Pen can be used to write in any orientation,
+            including upside-down. It even works in outer space.
+          </p>
+        </div>
+      </div>
+    </>
   );
-};
-
-export const loader = () => {
-  return new Promise((resolve, reject) => {
-    fetch("https://dummyjson.com/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: "kminchelle",
-        password: "0lelplR",
-        // expiresInMins: 60, // optional
-      }),
-    })
-      .then((res) => res.json())
-      .then(resolve)
-      .catch(reject);
-  });
 };

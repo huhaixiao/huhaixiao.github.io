@@ -1,5 +1,5 @@
 import React, { StrictMode, Suspense } from "react";
-import { Outlet, useLoaderData } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { ThemeContextProvider } from "../features/theme";
 
 const Loading = () => {
@@ -7,7 +7,6 @@ const Loading = () => {
 };
 
 export const Root = () => {
-  const data = useLoaderData();
   return (
     <StrictMode>
       <Suspense fallback={<Loading />}>
@@ -17,12 +16,4 @@ export const Root = () => {
       </Suspense>
     </StrictMode>
   );
-};
-
-export const loader = () => {
-  return new Promise((resolve) => {
-    fetch("https://dummyjson.com/products")
-      .then((res) => res.json())
-      .then(resolve);
-  });
 };

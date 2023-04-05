@@ -6,12 +6,16 @@ const Loading = () => {
   return <span>loading...</span>;
 };
 
-export const Root = () => {
+export const Index = () => {
+  useLayoutEffect(() => {
+    document.body.classList.add("bg-white", "dark:bg-black");
+  }, []);
   return (
     <StrictMode>
       <Suspense fallback={<Loading />}>
         <ThemeContextProvider>
-          <div className="bg-white dark:bg-black h-screen p-6">
+          <div className="bg-white dark:bg-black"></div>
+          <div className="p-6">
             <Outlet />
           </div>
         </ThemeContextProvider>

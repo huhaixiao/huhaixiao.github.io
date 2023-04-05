@@ -2,7 +2,7 @@
 // https://beta.reactjs.org/reference/react/Suspense
 import React from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
-import { Root } from "./routes/root";
+import { Index } from "./routes";
 import { Store } from "./routes/app-store";
 
 export const App = () => {
@@ -10,7 +10,7 @@ export const App = () => {
     [
       {
         path: "/",
-        element: <Root />,
+        element: <Index />,
         children: [
           {
             path: "/",

@@ -11,15 +11,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
     "@huhaixiao/react-components": "workspace:*",
     "@huhaixiao/react-hooks": "workspace:*",
     "@huhaixiao/utils": "workspace:^1.0.0",
+    "@mui/material": "^5.11.16",
+    "@types/webpack-bundle-analyzer": "^4.6.0",
     "antd-mobile": "^5.29.0",
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
-    "styled-components": "^5.3.6"
+    "styled-components": "^5.3.6",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "workbox-webpack-plugin": "^6.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.21.0",

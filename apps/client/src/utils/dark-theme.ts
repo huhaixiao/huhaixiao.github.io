@@ -23,9 +23,6 @@ function darkOn() {
 export function setup() {
   const mediqQueryList = window.matchMedia("(prefers-color-scheme: dark)");
   mediqQueryList.addEventListener("change", (ev) => {
-    if ("theme" in localStorage) {
-      return;
-    }
     if (ev.matches) {
       darkOn();
     } else {
@@ -40,12 +37,7 @@ export function setup() {
 }
 export function forceLightOn() {
   lightOn();
-  localStorage.theme = "light";
 }
 export function forceDarkOn() {
   darkOn();
-  localStorage.theme = "dark";
-}
-export function cancelForce() {
-  localStorage.removeItem("theme");
 }

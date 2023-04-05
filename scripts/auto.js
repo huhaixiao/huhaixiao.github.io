@@ -9,6 +9,7 @@ function changeDir () {
 
 async function runCLI (cli) {
   return new Promise((resolve) => {
+    console.log(`running ${cli}`);
     childProcess.exec(cli, resolve);
   });
 }

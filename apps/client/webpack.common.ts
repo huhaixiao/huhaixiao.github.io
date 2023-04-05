@@ -10,7 +10,9 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
     }),
-    new BundleAnalyzerPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+    }),
     // new GenerateSW({
     //   skipWaiting: true,
     //   clientsClaim: true,
@@ -24,8 +26,8 @@ const config: webpack.Configuration = {
     type: "filesystem",
   },
   optimization: {
-    usedExports: true
-  }
+    usedExports: true,
+  },
 };
 
 export default config;

@@ -1,14 +1,26 @@
-function lightOn() {
+function tailwindLightOn() {
   document.documentElement.classList.remove("dark");
+}
+function tailwindDarkOn() {
+  document.documentElement.classList.add("dark");
+}
+function antdmLightOn() {
   document.documentElement.setAttribute("data-prefers-color-scheme", "");
 }
-function darkOn() {
-  document.documentElement.classList.add("dark");
+function antdmDarkOn() {
   document.documentElement.setAttribute("data-prefers-color-scheme", "dark");
 }
 
+function lightOn() {
+  tailwindLightOn()
+  antdmLightOn()
+}
+function darkOn() {
+  tailwindDarkOn()
+  antdmDarkOn()
+}
+
 export function setup() {
-  document.body.classList.add("bg-white", "dark:bg-slate-800");
   const mediqQueryList = window.matchMedia("(prefers-color-scheme: dark)");
   mediqQueryList.addEventListener("change", (ev) => {
     if ("theme" in localStorage) {

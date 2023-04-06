@@ -20,16 +20,15 @@ async function workSpaceClientGitPush () {
     await runCLI("git init");
     await runCLI("git add .");
     await runCLI("git commit -m \"setup\"");
-    await runCLI("git remote add origin git@github.com:huhaixiao/huhaixiao.github.io.git");
-    // add gitee origin
-    // await runCLI("git remote add origin git@github.com:huhaixiao/huhaixiao.github.io.git");
+    await runCLI("git remote add github git@github.com:huhaixiao/huhaixiao.github.io.git");
+    await runCLI("git remote add gitee git@gitee.com:huhaixiao/app.git");
     await runCLI("git checkout -b main");
-    await runCLI("git push origin HEAD -f");
-    // push to gitee
-    // await runCLI("git push origin HEAD -f");
-    console.log("publish to github success");
+    await runCLI("git push github HEAD -f");
+    await runCLI("git push gitee HEAD -f");
+    console.log("publish success");
   } catch (e) {
-    console.log("publish to github failed");
+    console.log(e);
+    console.log("publish failed");
   }
 }
 
@@ -46,6 +45,8 @@ async function monoGitPush () {
 async function monoBuild () {
   try {
     await runCLI("pnpm --filter client build");
+    await runCLI("pnpm --filter docs build");
+    await runCLI("node scripts/copy.js");
   } catch (e) {
     console.log("monoBuild error");
   }

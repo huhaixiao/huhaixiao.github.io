@@ -31,6 +31,8 @@
     // tailwindcss
     "bradlc.vscode-tailwindcss",
     // Postcss
-    "csstools.postcss"
+    "csstools.postcss",
+    // mdx
+    "unifiedjs.vscode-mdx",
   ]
 }

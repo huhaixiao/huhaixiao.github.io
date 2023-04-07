@@ -21,7 +21,7 @@ async function workSpaceClientGitPush () {
     await runCLI("git add .");
     await runCLI("git commit -m \"setup\"");
     await runCLI("git remote add github git@github.com:huhaixiao/huhaixiao.github.io.git");
-    await runCLI("git remote add gitee git@gitee.com:huhaixiao/app.git");
+    await runCLI("git remote add gitee git@gitee.com:huhaixiao/huhaixiao.git");
     await runCLI("git checkout -b main");
     await runCLI("git push github HEAD -f");
     await runCLI("git push gitee HEAD -f");

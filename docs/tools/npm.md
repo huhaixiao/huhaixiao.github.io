@@ -1,0 +1,7 @@
+- [npm Docs](https://docs.npmjs.com/)
+- [npm CLI](https://docs.npmjs.com/cli/)
+- .npmrc
+-`package-name`
+-`@scoped/package-name`
+- `npm init -y`
+- `npm help`

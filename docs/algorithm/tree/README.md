@@ -1,0 +1,5 @@
+- left degree right
+- preorder dlr
+- inorder ldr
+- postorder lrd
+- [https://leetcode-cn.com/tag/tree/](https://leetcode-cn.com/tag/tree/)

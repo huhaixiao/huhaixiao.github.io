@@ -1,0 +1,4 @@
+- 微信浏览器不会自带 http referer header
+- 删除.umi
+- 删除package-lock.json
+- 删除node_modules

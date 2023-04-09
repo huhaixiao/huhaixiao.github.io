@@ -60,7 +60,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "",
+        title: "one",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg"
@@ -68,11 +68,29 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "docSideBar",
+            sidebarId: "docusuaurus",
             position: "left",
-            label: "Docs"
+            label: "Dummy Docusaurus"
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            type: "docSidebar",
+            sidebarId: "algorithm",
+            position: "left",
+            label: "Algorithm"
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "api",
+            position: "left",
+            label: "api"
+          },
+          { to: "/blog", label: "Dummy Blog", position: "left" },
+          {
+            type: "docSidebar",
+            sidebarId: "english",
+            position: "right",
+            label: "English"
+          },
           {
             href: "https://github.com/huhaixiao",
             label: "GitHub",

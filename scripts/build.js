@@ -1,17 +1,15 @@
 const process = require("process");
 const path = require("path");
-const childProcess = require("child_process");
+const fs = require("fs");
+const { runCLI } = require("./utils");
 
 function changeDir () {
   const clientDir = path.resolve(process.cwd(), "./apps/client/dist");
   process.chdir(clientDir);
 }
 
-async function runCLI (cli) {
-  return new Promise((resolve) => {
-    console.log(`running ${cli}`);
-    childProcess.exec(cli, resolve);
-  });
+function copyDocs () {
+  fs.cpSync("./apps/docs/build", "./apps/client/dist/wiki", { recursive: true });
 }
 
 async function workSpaceClientGitPush () {
@@ -46,7 +44,7 @@ async function monoBuild () {
   try {
     await runCLI("pnpm --filter client build");
     await runCLI("pnpm --filter docs build");
-    await runCLI("node scripts/copy.js");
+    copyDocs();
   } catch (e) {
     console.log("monoBuild error");
   }

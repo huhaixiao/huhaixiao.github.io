@@ -115,3 +115,16 @@ function throttle(fn, limit) {
   return throttled
 }
 ```
+
+代码执行情况
+```js
+let a = 0, b = 0;
+function fn(a) {
+  fn = function fn2(b) {
+    alert(++a+b);
+  }
+  alert(a++);
+}
+fn(1); // 1
+fn(2); // 5
+``` 

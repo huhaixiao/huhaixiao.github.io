@@ -61,13 +61,13 @@ myFoo.dispatchEvent(new CustomEvent('wtf', {
 
 ## capturing phase
 
-- The browser checks to see if the element's outer-most ancestor (`<html>`) has an onclick event handler registered on it for the capturing phase, and runs it if so.
+- The browser checks to see if the element's outer-most ancestor `<html>` has an onclick event handler registered on it for the capturing phase, and runs it if so.
 - Then it moves on to the next element inside `<html>` and does the same thing, then the next one, and so on until it reaches the direct parent of the element that was actually selected.
 
 ## target phase
 
 - The browser checks to see if the target property has an event handler for the `click` event registered on it, and runs it if so.
-- Then, if bubbles is `true`, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the <html> element. Otherwise, if bubbles is `false`, it doesn’t propagate the event to any ancestors of the target.
+- Then, if bubbles is `true`, it propagates the event to the direct parent of the selected element, then the next one, and so on until it reaches the `<html>` element. Otherwise, if bubbles is `false`, it doesn’t propagate the event to any ancestors of the target.
 
 ## bubbling phase
 

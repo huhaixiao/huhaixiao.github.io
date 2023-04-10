@@ -8,3 +8,6 @@
 - preorder traversal DLR: Degree Left Right
   - Degree: 阶层
 - POST 常见 3、4 种形式
+
+TODO
+增加发布完成后自动打开 https://gitee.com/huhaixiao/huhaixiao/pages

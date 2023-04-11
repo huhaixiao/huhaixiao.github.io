@@ -8,8 +8,8 @@ const katex = require("rehype-katex");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "One",
+  tagline: "Less is more",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -68,38 +68,33 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "docusuaurus",
-            position: "left",
-            label: "Dummy Docusaurus"
-          },
-          {
-            type: "docSidebar",
             sidebarId: "algorithm",
             position: "left",
-            label: "Algorithm"
+            label: "algorithm"
           },
           {
             type: "docSidebar",
-            sidebarId: "api",
+            sidebarId: "coding",
             position: "left",
-            label: "api"
+            label: "coding"
           },
-          { to: "/blog", label: "Dummy Blog", position: "left" },
+          {
+            type: "docSidebar",
+            sidebarId: "computerScience",
+            position: "left",
+            label: "computer science"
+          },
           {
             type: "docSidebar",
             sidebarId: "english",
             position: "right",
-            label: "English"
+            label: "english"
           },
           {
-            href: "https://github.com/huhaixiao",
-            label: "GitHub",
-            position: "right"
-          },
-          {
-            href: "https://leetcode.cn/u/haixhu/",
-            label: "LeetCode-cn",
-            position: "right"
+            type: "docSidebar",
+            sidebarId: "math",
+            position: "right",
+            label: "math"
           }
         ]
       },
@@ -134,6 +129,19 @@ const config = {
               {
                 label: "LeetCode-cn",
                 href: "https://leetcode.cn/u/haixhu/"
+              }
+            ]
+          },
+          {
+            title: "docs",
+            items: [
+              {
+                label: "React",
+                href: "https://react.dev"
+              },
+              {
+                label: "Jest",
+                href: "https://jestjs.io/"
               },
               {
                 label: "help",

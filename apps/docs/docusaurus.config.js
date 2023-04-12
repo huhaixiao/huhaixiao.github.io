@@ -166,6 +166,38 @@ const config = {
           "sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM",
       crossorigin: "anonymous"
     }
+  ],
+
+  plugins: [
+    [
+      "@docusaurus/plugin-pwa",
+      {
+        debug: true,
+        offlineModeActivationStrategies: [
+          // "appInstalled",
+          // "standalone",
+          // activates if queryString contains offlineMode=true (convenient for PWA debugging)
+          "queryString"
+        ],
+        pwaHead: [
+          {
+            tagName: "link",
+            rel: "icon",
+            href: "/img/docusaurus.png"
+          },
+          {
+            tagName: "link",
+            rel: "manifest",
+            href: "/manifest.json" // your PWA manifest
+          },
+          {
+            tagName: "meta",
+            name: "theme-color",
+            content: "rgb(37, 194, 160)"
+          }
+        ]
+      }
+    ]
   ]
 };
 

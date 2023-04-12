@@ -7,6 +7,11 @@ function runCLI (cli) {
   });
 }
 
+function open (url) {
+  childProcess.exec(`start ${url}`);
+}
+
 module.exports = {
-  runCLI
+  runCLI,
+  open
 };

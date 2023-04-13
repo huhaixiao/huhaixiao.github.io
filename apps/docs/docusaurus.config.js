@@ -102,24 +102,6 @@ const config = {
         style: "dark",
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Tutorial",
-                to: "/docs/intro"
-              }
-            ]
-          },
-          {
-            title: "Community",
-            items: [
-              {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus"
-              }
-            ]
-          },
-          {
             title: "More",
             items: [
               {
@@ -135,14 +117,6 @@ const config = {
           {
             title: "docs",
             items: [
-              {
-                label: "React",
-                href: "https://react.dev"
-              },
-              {
-                label: "Jest",
-                href: "https://jestjs.io/"
-              },
               {
                 label: "help",
                 href: "https://docusaurus.io/"

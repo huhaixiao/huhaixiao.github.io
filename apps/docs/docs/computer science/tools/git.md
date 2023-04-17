@@ -135,3 +135,20 @@ git pack-refs
 
 cat .git/packed-refs
 ```
+
+git Source code management
+
+- `git log -<number> --grep=<pattern> --no-merges --author='Haixiao Hu'`
+- `git branch -vv` 查看branch track的remote
+- `git pull --rebase --autostash`
+- `git remote -v`
+- `git push origin HEAD -f`
+- `git push -d <repository> <refspec>`
+- `git branch --edit-description`
+- `git config branch.<name>.description`
+- `git config user.name`
+- `git config user.email`
+- github 网页版 merge 策略
+  - Merge pull request
+  - Squash and merge
+  - Rebase and merge

@@ -631,3 +631,107 @@ PANGGELIA
 男：可以啊 我给你买好的 别人都是死该 我给你买条活该
 
 - [32 个手撕 JS 让你彻底摆脱初级前端](https://mp.weixin.qq.com/s?__biz=MzI1NjkwNDcyOQ==&mid=2247490925&idx=1&sn=062a72b85e21c482fa03cfc25b10bb01&chksm=ea1ec61bdd694f0ddf18e9c42bfb34e492afbb4db4c96f5daaeb0085b6fdcbfacd2678017f78&exptype=unsubscribed_card_3001_article_onlinev2_3000w_promotion_level2&expsessionid=1841796275571130368&scene=169&subscene=10000&sessionid=1619497727&clicktime=1619498061&enterid=1619498061&ascene=56&devicetype=android-30&version=28000335&nettype=cmnet&abtest_cookie=AAACAA%3D%3D&lang=zh_CN&exportkey=AZTakyJW9I00qdG5Q1YfK1Q%3D&pass_ticket=kYm65hjbBwVnBN1zz%2FBFjH1qZKuGLojzOmdjODMBQLZFbwPp61L%2BU9eozk51hz2y&wx_header=1)
+
+- [app](#app)
+- [ts](#ts)
+- [npm cli](#npm)
+- [git cli](#git)
+
+# todo
+
+- rollup
+- grunt
+- webpack
+- nginx
+- httpClient
+- wget
+- curl
+- docker
+
+# app
+
+- [掘金](https://juejin.cn/)
+
+# npm
+
+<details>
+    <summary>
+        npm install git repo
+    </summary>
+
+```
+npm install git+https://github.tesla.cn/haixhu/stencil-starter-git-package.git#master
+```
+
+</details>
+
+- `npm info react`
+- `npm list --global`
+- `npx create-react-app@latest my-cra-app --template typescript`
+- `yarn create @umijs/umi-app`
+
+- `cross-env PORT=7777`
+- [type-changes](https://github.com/type-challenges/type-challenges)
+
+# ts
+
+<details>
+  <summary>
+    <code>as const</code>
+  </summary>
+
+```ts
+// as const
+const tom = {
+ name: 'tom',
+ age: 18,
+} as const;
+```
+
+</details>
+
+<details>
+  <summary>
+    <code>keyof</code>
+  </summary>
+
+```ts
+// keyof T
+type keyofTom = keyof tom;
+type keyOfT = keyof T;
+type keyTypeOfT = T[K];
+```
+
+</details>
+
+```ts
+// T[K]
+interface Eg1 {
+  name: string,
+  readonly age: number,
+}
+// string
+type V1 = Eg1['name']
+// string | number
+type V2 = Eg1['name' | 'age']
+// any
+type V2 = Eg1['name' | 'age2222']
+// string | number
+type V3 = Eg1[keyof Eg1]
+```
+
+```ts
+// &
+// 交叉类型取的多个类型的并集，但是如果相同key但是类型不同，则该key为never。
+interface Eg1 {
+  name: string,
+  age: number,
+}
+
+interface Eg2 {
+  color: string,
+  age: string,
+}
+
+type T = Eg1 & Eg2 // {name: string; age: never; color: string}
+```

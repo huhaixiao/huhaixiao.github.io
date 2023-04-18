@@ -1,6 +1,4 @@
-# Depth First Search
-
-## Number of Islands
+# Number Of Islands
 
 ```tsx
 /**

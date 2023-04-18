@@ -1,45 +1,9 @@
-- [Everyday Types](#everyday-types)
-  - [Functions](#functions)
-  - [Union Types](#union-types)
-  - [Type Alias](#type-alias)
-  - [Interfaces](#interfaces)
-  - [Type Assertions](#type-assertions)
-  - [Literal Types](#literal-types)
-  - [Literal Inference](#literal-inference)
-  - [Enums](#enums)
-    - [Numeric enums](#numeric-enums)
-    - [Computed and constant members](#computed-and-constant-members)
-    - [`const` enums](#const-enums)
-- [Narrowing](#narrowing)
-  - [`typeof` type guards](#typeof-type-guards)
-  - [Truthiness narrowing](#truthiness-narrowing)
-  - [Equality narrowing](#equality-narrowing)
-  - [The `in` operator narrowing](#the-in-operator-narrowing)
-  - [`instanceof` narrowing](#instanceof-narrowing)
-  - [Using type predicates](#using-type-predicates)
-  - [Exhaustiveness checking](#exhaustiveness-checking)
-- [More on Functions](#more-on-functions)
-  - [Function Type Expressions](#function-type-expressions)
-  - [Call Signatures](#call-signatures)
-  - [Constraints](#constraints)
-  - [Function Overloads](#function-overloads)
-  - [Declaring `this` in a Function](#declaring-this-in-a-function)
-- [Object Types](#object-types)
-  - [Index Signatures](#index-signatures)
-- [Type Manipulation](#type-manipulation)
-  - [Generics](#generics)
-    - [Generic Types](#generic-types)
-    - [Generic Classes](#generic-classes)
-    - [Generic Constraints](#generic-constraints)
-  - [Keyof Type Operator](#keyof-type-operator)
-  - [Mapped Types](#mapped-types)
-    - [Key Remapping via `as`](#key-remapping-via-as)
-- [Appendix](#appendix)
+# TypeScript
 
+- [type-challenges](https://github.com/type-challenges/type-challenges)
 - [ ] https://zhuanlan.zhihu.com/p/350033675
 - [https://www.typescriptlang.org/](https://www.typescriptlang.org/)
-
-# [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
+- [Everyday Types](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html)
 
 ## Functions
 
@@ -162,9 +126,9 @@ let directions = [
 ];
 ```
 
-# [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
+## [Narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html)
 
-## [`typeof` type guards](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#typeof-type-guards)
+### [`typeof` type guards](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#typeof-type-guards)
 
 - `"string"`
 - `"number"`
@@ -177,7 +141,7 @@ let directions = [
 
 > In TypeScript, checking against the value returned by `typeof` is a type guard
 
-## [Truthiness narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#truthiness-narrowing)
+### [Truthiness narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#truthiness-narrowing)
 
 - `0`
 - `NaN`
@@ -188,7 +152,7 @@ let directions = [
 
 > all coerce to `false`
 
-## [Equality narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#equality-narrowing)
+### [Equality narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#equality-narrowing)
 
 - `switch`
 - `===`
@@ -196,7 +160,7 @@ let directions = [
 - `==`
 - `!=`
 
-## [The `in` operator narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing)
+### [The `in` operator narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#the-in-operator-narrowing)
 
 ```ts
 type Fish = { swim: () => void };
@@ -216,7 +180,7 @@ function move(animal: Fish | Bird | Human) {
 }
 ```
 
-## [`instanceof` narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
+### [`instanceof` narrowing](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#instanceof-narrowing)
 
 ```ts
 function logValue(x: Date | string) {
@@ -232,7 +196,7 @@ function logValue(x: Date | string) {
 }
 ```
 
-## [Using type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates)
+### [Using type predicates](https://www.typescriptlang.org/docs/handbook/2/narrowing.html#using-type-predicates)
 
 ```ts
 function isFish(pet: Fish | Bird): pet is Fish {
@@ -240,7 +204,7 @@ function isFish(pet: Fish | Bird): pet is Fish {
 }
 ```
 
-## Exhaustiveness checking
+### Exhaustiveness checking
 
 ```ts
 type Shape = Circle | Square;
@@ -258,15 +222,15 @@ function getArea(shape: Shape) {
 }
 ```
 
-# [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
+## [More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html)
 
-## Function Type Expressions
+### Function Type Expressions
 
 ```ts
 type GreetFunction = (a: string) => void;
 ```
 
-## Call Signatures
+### Call Signatures
 
 ```ts
 type DescribableFunction = {
@@ -275,7 +239,7 @@ type DescribableFunction = {
 };
 ```
 
-## Constraints
+### Constraints
 
 ```ts
 function longest<Type extends { length: number }>(a: Type, b: Type) {
@@ -294,7 +258,7 @@ const longerString = longest("alice", "bob");
 const notOK = longest(10, 100);
 ```
 
-## [Function Overloads](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
+### [Function Overloads](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
 
 ```ts
 function makeDate(timestamp: number): Date;
@@ -316,7 +280,7 @@ const d3 = makeDate(1, 3);
 
 > It looks at these special checks (called *type guards*) and assignments, and the process of refining types to more specific types than declared is called *narrowing*.
 
-## [Declaring `this` in a Function](https://www.typescriptlang.org/docs/handbook/2/functions.html#declaring-this-in-a-function)
+### [Declaring `this` in a Function](https://www.typescriptlang.org/docs/handbook/2/functions.html#declaring-this-in-a-function)
 
 ```ts
 interface DB {
@@ -329,9 +293,9 @@ const admins = db.filterUsers(function (this: User) {
 });
 ```
 
-# [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
+## [Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html)
 
-## [Index Signatures](https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures)
+### [Index Signatures](https://www.typescriptlang.org/docs/handbook/2/objects.html#index-signatures)
 
 ```ts
 interface StringArray {
@@ -350,9 +314,7 @@ interface NotOkay {
 }
 ```
 
-# Type Manipulation
-
-## Generics
+## Type Manipulation
 
 ### [Generic Types](https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-types)
 
@@ -400,7 +362,7 @@ function loggingIdentity<Type extends Lengthwise>(arg: Type): Type {
 loggingIdentity({ length: 10, value: 3 });
 ```
 
-## [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)
+### [Keyof Type Operator](https://www.typescriptlang.org/docs/handbook/2/keyof-types.html)
 
 ```ts
 type Point = { x: number; y: number };
@@ -418,7 +380,7 @@ type Mapish = { [k: string]: boolean };
 type M = keyof Mapish;
 ```
 
-## [Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
+### [Mapped Types](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html)
 
 - A mapped type is a generic type which uses a union of PropertyKeys (frequently created via a keyof) to iterate through keys to create a type
 
@@ -429,3 +391,34 @@ type OptionsFlags<Type> = {
 ```
 
 ### [Key Remapping via `as`](https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#key-remapping-via-as)
+- `intrinsic`
+
+## tsconfig.json
+
+```shell
+# generate tsconfig.json
+tsc --init
+```
+
+## enums
+
+- [enums](https://www.typescriptlang.org/docs/handbook/enums.html)
+
+```typescript
+// Computed members
+enum FileAccess {
+  // constant members
+  None,
+  Read = 1 << 1,
+  Write = 1 << 2,
+  ReadWrite = Read | Write,
+  // computed member
+  G = "123".length,
+}
+
+// const enum
+const enum Enum {
+  A = 1,
+  B = A * 2,
+}
+```

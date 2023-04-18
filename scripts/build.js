@@ -56,7 +56,6 @@ async function main () {
   await monoBuild();
   changeDir();
   await workSpaceClientGitPush();
-  // TODO open https://gitee.com/huhaixiao/huhaixiao/pages
 }
 
 main();

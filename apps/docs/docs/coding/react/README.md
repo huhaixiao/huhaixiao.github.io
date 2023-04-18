@@ -33,3 +33,7 @@ react query
     * 低阶组件 基于DOM 封装
     * 高阶组件 具体低阶组件封装
     * 「高阶组件」无法直接将ref指向DOM
+
+```ts
+React.memo()
+```

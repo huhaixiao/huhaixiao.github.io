@@ -3,7 +3,7 @@
 - http://www.mohu.org/info/symbols/symbols.htm
 - http://docs.mathjax.org/en/v2.7-latest/
 
-\\[ y=ax^2+bx+c \\]
+\[ y=ax^2+bx+c \]
 \\[ \\sqrt{x} \\]
 \\[ \\sqrt[n]{x} \\]
 \\[ \\overline{xyz} \\]

@@ -1,13 +1,4 @@
-# Web API
-
-- Background Tasks API
-  - `window.requestIdleCallback`
-  - `window.cancelIdleCallback`
-  - `polyfill`
-- Battery Status API
-  - `navigator.getBattery`
-- `BroadcastChannel`
-- `Resize Observer API`
+# Event
 
 ## EventTarget
 
@@ -29,12 +20,12 @@
 - The return value is `false` if `event` is cancelable and at least one of the event handlers which received `event` called `Event.preventDefault()`. Otherwise it returns `true`.
 - 同步行为
 
-### `onevent` `addEventListener` 区别
+## `onevent` `addEventListener` 区别
 
 - `onevent` 兼容性好属于`mixin`
 - `addEventListener` DOM Level2 Events
 
-### `CustomEvent`
+## `CustomEvent`
 
 - [https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent)
 
@@ -50,6 +41,8 @@ myFoo.dispatchEvent(new CustomEvent('wtf', {
   detail: 'wtf'
 }))
 ```
+
+
 ## Event bubbling and capture
 
 - When an event is fired on an element that has parent elements
@@ -76,6 +69,3 @@ myFoo.dispatchEvent(new CustomEvent('wtf', {
 ### Event delegation
 
 - this concept relies on the fact that if you want some code to run when you select any one of a large number of child elements
-## Element
-
-- `Element.closest(selectors)`

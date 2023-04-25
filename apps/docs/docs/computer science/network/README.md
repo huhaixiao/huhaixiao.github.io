@@ -3,8 +3,6 @@
 - 路由器
     1. 路由器（Router）是连接两个或多个网络的[硬件](https://baike.baidu.com/item/%E7%A1%AC%E4%BB%B6/479446)设备
 - 网关
-    
-    
 
 502 Bad Gateway
 

@@ -8,6 +8,7 @@
 
 ## Basic
 
+- MinAbsSum
 - Easy
 - Knapsack Problem
 - 区间dp

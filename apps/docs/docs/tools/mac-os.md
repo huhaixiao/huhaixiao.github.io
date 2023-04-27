@@ -8,4 +8,7 @@ kill -9 {PID}
 
 # 查看本地IP; en:0 字段查看IPv4
 ifconfig
+
+# sed ??
+sed -i "s:old_value:new_value:g" src/index.ts
 ```

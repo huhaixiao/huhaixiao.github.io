@@ -1,9 +1,39 @@
+# git
+
 - [git scm reference](https://git-scm.com/docs)
 - Untracked files
 - Working area
 - Staging area
 - Local repo
 - Remote repo
+
+```shell
+# 获取commit id
+git rev-parse --short HEAD～8
+```
+
+## git bisect
+
+```shell
+git bisect start <latter-bad-commit> <former-good-commit>
+git bisect start HEAD~0 HEAD~128
+git bisect good
+git bisect bad
+git bisect reset
+```
+
+## git cherry-pick
+
+- Apply the changes introduced by some existing commits.
+
+```shell
+git cherry-pick <commit>...
+git cherry-pick -n <commit>...
+```
+
+## todo
+
+
 
 - 三大分区
   - 工作区(working tree) add
@@ -32,13 +62,6 @@ git add <path>
 git blame <file>
 git blame <file> -L <line_number>
 
-# git bisect
-git bisect start <latter-bad-commit> <former-good-commit>
-git bisect start HEAD~0 HEAD~128
-git bisect good
-git bisect bad
-git bisect reset
-
 # git checkout
 git checkout <branch_name>
 git checkout -
@@ -48,11 +71,6 @@ git checkout .
 
 # git show
 git show <commit> --stat
-
-# git cherry-pick
-# Apply the changes introduced by some existing commits.
-git cherry-pick <commit>...
-git cherry-pick -n <commit>...
 
 # git revert
 # Revert some existing commits

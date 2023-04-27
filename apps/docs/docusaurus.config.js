@@ -86,6 +86,12 @@ const config = {
           },
           {
             type: "docSidebar",
+            sidebarId: "tools",
+            position: "left",
+            label: "tools"
+          },
+          {
+            type: "docSidebar",
             sidebarId: "english",
             position: "right",
             label: "english"
@@ -111,6 +117,14 @@ const config = {
               {
                 label: "LeetCode-cn",
                 href: "https://leetcode.cn/u/haixhu/"
+              },
+              {
+                label: "gitee update",
+                href: "https://gitee.com/huhaixiao/huhaixiao/pages"
+              },
+              {
+                label: "语雀",
+                href: "https://www.yuque.com/dashboard"
               }
             ]
           },

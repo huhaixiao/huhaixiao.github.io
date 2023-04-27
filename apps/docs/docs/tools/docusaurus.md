@@ -1,3 +1,8 @@
+# Docusaurus
+
+- https://docusaurus.io/
+
+```md
 ---
 sidebar_position: 1
 sidebar_label: Algorithm
@@ -9,12 +14,4 @@ tags:
   - Easy
 slug: /
 ---
-
-# algorithm
-
-- 水塘抽样
-- 前缀和
-- MinAbsSum
-- Aho-Corasick
-- 486 预测赢家
-- 877 石子游戏
+```

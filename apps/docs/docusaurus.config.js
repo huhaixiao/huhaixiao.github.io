@@ -71,6 +71,11 @@ const config = {
             sidebarId: "algorithm",
             position: "left",
             label: "algorithm"
+          }, {
+            type: "docSidebar",
+            sidebarId: "design",
+            position: "left",
+            label: "design"
           },
           {
             type: "docSidebar",

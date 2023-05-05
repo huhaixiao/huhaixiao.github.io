@@ -1,35 +1,4 @@
-
-
-
 err_cache_miss
-
-# Shell
-
-- bash 是 Shell 的一种
-- zsh Z-Shell 是 Mac default Shell
-- shell命令可以分为以下三类：
- - 内建函数(built-in function)：shell自带的功能
- - 可执行文件(executable file)：保存在shell之外的脚本，提供了额外的功能。
- - 别名(alias)：给某个命令的简称
-
-```shell
-# Mac zsh
-
-# 返回命令对应的可执行文件的绝对路径
-which date
-which pwd
-
-# 可以用type命令查看命令类型。
-# 如果是内建函数会返回builtin字样，
-# 如果是可执行文件，将返回文件的路径
-type date
-type pwd
-
-date
-cal
-echo $SHELL
-
-```
 
 [《linux shell 脚本 入门到实战详解[⭐建议收藏！！⭐]》](https://blog.csdn.net/weixin_42313749/article/details/120524768?utm_source=app&app_version=5.5.0)
 
@@ -51,9 +20,11 @@ _src/lib/query.ts_
 export { useQuery, useMutation, useQueryClient } from 'react-query';
 ```
 
+```text
 lint
 
 import order
+```
 
 avoid default export
 
@@ -61,256 +32,12 @@ avoid default export
 - This may give you a flexibility, but if multiple developers imports the same module with different names or even non descriptive name, we are screwed.
 - Named exports are explicit, forcing the consumer to import with the names the original author intended and removing any ambiguity.
 
-React Component Structure
-
-```ts
-
-// 1. Imports - Prefer destructuring imports to minimize writen code
-import React, { PropsWithChildren, useState, useEffect } from "react";
-
-// 2. Types
-type ComponentProps = {
-  someProperty: string;
-};
-
-// 3. Styles - with @mui use styled API or sx prop of the component
-const Wrapper = styled("div")(({ theme }) => ({
-  color: theme.palette.white
-}));
-
-// 4. Additional variables
-const SOME_CONSTANT = "something";
-
-// 5. Component
-function Component({ someProperty }: PropsWithChildren<ComponentProps>) {
-  // 5.1 Definitions
-  const [state, setState] = useState(true);
-  const { something } = useSomething();
-
-  // 5.2 Functions
-  function handleToggleState() {
-    setState(!state);
-  }
-
-  // 5.3 Effects
-  // ❌
-  React.useEffect(() => {
-    // ...
-  }, []);
-
-  // ✅
-  useEffect(() => {
-    // ...
-  }, []);
-
-  // 5.5 Additional destructures
-  const { property } = something;
-
-  return (
-    <div>
-      {/* Separate elements if not closed on the same line to make the code clearer */}
-      {/* ❌ */}
-      <div>
-        <div>
-          <p>Lorem ipsum</p>
-          <p>Pellentesque arcu</p>
-        </div>
-        <p>Lorem ipsum</p>
-        <p>Pellentesque arcu</p>
-      </div>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
-          arcu. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-        <p>Pellentesque arcu</p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Pellentesque
-          arcu. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-      </div>
-
-      {/* ✅ */}
-      <Wrapper>
-        <div>
-          <p>Lorem ipsum</p>
-          <p>Pellentesque arcu</p>
-        </div>
-
-        <p>Lorem ipsum</p>
-        <p>Pellentesque arcu</p>
-      </Wrapper>
-
-      <div>
-        <div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            Pellentesque arcu. Et harum quidem rerum facilis est et expedita
-            distinctio.
-          </p>
-
-          <p>Pellentesque arcu</p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-            Pellentesque arcu. Et harum quidem rerum facilis est et expedita
-            distinctio.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-// 6. Exports
-export { Component };
-export type { ComponentProps };
-
-```
-
-# Separate function from the JSX if it takes more than 1 line
-
-```ts 
-
-// ❌
-<button
-  onClick={() => {
-    setState(!state);
-    resetForm();
-    reloadData();
-  }}
-/>
-
-// ✅
-<button onClick={() => setState(!state)} />
-
-// ✅
-const handleButtonClick = () => {
-  setState(!state);
-  resetForm();
-  reloadData();
-}
-
-<button onClick={handleButtonClick} />
-
-```
-
-# NPM
-- `npm install --force`
-- `npm install --legacy-peer-deps`
-- `npm install --save ${package-name}`
-- `npm install --save-dev ${package-name}`
-- `npm config list --json`
-- `npm config list -g --json`
-- `npm config get ${field}`
-- `rm -rf node_modules`
-- `rm -rf .umi`
-- `rm package-lock.json`
-
-```shell
-
-npm list -g --depth=0
-npm install --legacy-peer-deps
-
-# cra的正确方式
-npm uninstall -g create-react-app
-npm i -g npm@latest
-npm cache clean -f
-npx create-react-app@latest my-app --use-npm --template typescript
-
-```
-
 - [ ] BFF backend for frontend
 - [ ] 接口聚合
 - [ ] restful user get post
 - [ ] not restful getUser postUser
 
-# OOP Principle
-
-- 封装 继承 多态
-- SOLID
-- 最少知道原则
-
-- Keep it Simple Stupid
-- you aren't gonna need it
-- Separation of Concerns
-- Don't Repeat Yourself
-- Single Source of Truth
-- 避免过早优化
-- 童子军规则
- - 离开营地时让它比你发现它时更干净
- - 童子军规则规定我们应该始终保持代码比我们发现的更干净
-
- # styled-components
-
-```js
-import styled, { css } from 'styled-components'
-
-const publicStyle = css`
- color: red;
-`
-
-const StyledComponent = styled.div`
- ${publicStyle}
-`
-```
-
-- SOLID
-- Separation of Concerns
-- Design Patterns
-
-# React types
-
-```ts
-import { useState } from 'react'
-
-type Dispatch<A> = (value: A) => void;
-type SetStateAction<S> = S | ((prevState: S) => S);
-
-function useState<S = undefined>(): [S | undefined, Dispatch<SetStateAction<S | undefined>>];
-```
-
-```ts
-import type { FC, VFC } from 'react'
-
-type PropsWithChildren<P> = P & { children?: ReactNode };
-
-interface FunctionComponent<P = {}> {
-   (props: PropsWithChildren<P>, context?: any): ReactElement<any, any> | null;
-   propTypes?: WeakValidationMap<P>;
-   contextTypes?: ValidationMap<any>;
-   defaultProps?: Partial<P>;
-   displayName?: string;
-}
-
-interface VoidFunctionComponent<P = {}> {
-   (props: P, context?: any): ReactElement<any, any> | null;
-   propTypes?: WeakValidationMap<P>;
-   contextTypes?: ValidationMap<any>;
-   defaultProps?: Partial<P>;
-   displayName?: string;
-}
-
-type FC<P = {}> = FunctionComponent<P>;
-type VFC<P = {}> = VoidFunctionComponent<P>;
-```
-
-# MyReact types
-
-```ts
-import type { DOMAttributes } from 'react'
-
-export type PropsWithOnClick<P, T> = P & Pick<DOMAttributes<T>, 'onClick'>;
-```
-
-# CSS Transform
-
-- [translate](https://developer.mozilla.org/en-US/docs/Web/CSS/translate)
-- [rotate](https://developer.mozilla.org/en-US/docs/Web/CSS/rotate)
-- [scale](https://developer.mozilla.org/en-US/docs/Web/CSS/scale)
-
 - PNG Portable Network Graphics
-
 - jwt-decode
 - js-cookie
 
@@ -734,4 +461,43 @@ interface Eg2 {
 }
 
 type T = Eg1 & Eg2 // {name: string; age: never; color: string}
+```
+
+```js
+function flat() {
+  const arr = [1, [2, [3, [4, 5]]], 6];
+
+  arr.flat();
+}
+
+function curry(fn) {
+  return function curried(...args) {
+    if (args.length >= fn.length) {
+      fn.apply(this, ...args)
+    } else {
+      return function (...args2) {
+        return curried.apply(this, [...args, ...args2])
+      }
+    }
+  }
+}
+
+function loadScript(src) {
+  return new Promise(resolve => {
+    const scriptElement = document.createElement('script')
+    scriptElement.src = src
+    scriptElement.onload = resolve
+    document.head.appendChild(scriptElement)
+  })
+}
+
+const loadStyle = function (href) {
+  return new Promise(resolve => {
+    const linkElement = document.createElement('link')
+    linkElement.rel = 'stylesheet'
+    linkElement.href = href
+    linkElement.onload = resolve
+    document.head.appendChild(linkElement)
+  })
+}
 ```

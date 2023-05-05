@@ -1,3 +1,5 @@
+# styled-components
+
 ```tsx
 const CardContainer = styled.div<{ isFloat?: boolean }>`
   position: ${(props) => (props.isFloat ? 'fixed' : 'absolute')};
@@ -21,3 +23,15 @@ const CardContainer = styled.div<{ isFloat?: boolean }>`
 ****[Adapting based on props](https://styled-components.com/docs/basics#adapting-based-on-props)****
 
 [Pseudoelements, pseudoselectors, and nesting](https://styled-components.com/docs/basics#pseudoelements-pseudoselectors-and-nesting)
+
+```js
+import styled, { css } from 'styled-components'
+
+const publicStyle = css`
+ color: red;
+`
+
+const StyledComponent = styled.div`
+ ${publicStyle}
+`
+```

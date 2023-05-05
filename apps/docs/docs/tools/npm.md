@@ -7,6 +7,16 @@
 -`@scoped/package-name`
 - `npm init -y`
 - `npm help`
+- `npm install --force`
+- `npm install --legacy-peer-deps`
+- `npm install --save ${package-name}`
+- `npm install --save-dev ${package-name}`
+- `npm config list --json`
+- `npm config list -g --json`
+- `npm config get ${field}`
+- `rm -rf node_modules`
+- `rm -rf .umi`
+- `rm package-lock.json`
 
 
 <details>
@@ -28,3 +38,13 @@ npm install git+https://github.tesla.cn/haixhu/stencil-starter-git-package.git#m
 - `cross-env PORT=7777`
 - [type-changes](https://github.com/type-challenges/type-challenges)
 
+```shell
+npm list -g --depth=0
+npm install --legacy-peer-deps
+
+# cra的正确方式
+npm uninstall -g create-react-app
+npm i -g npm@latest
+npm cache clean -f
+npx create-react-app@latest my-app --use-npm --template typescript
+```

@@ -1,0 +1,54 @@
+# Animation
+
+## CSS
+
+```css
+p {
+  /* Specifies the name of the @keyframes
+			at-rule describing the animation’s keyframes. */
+  animation-name: wtf;
+
+  /* Configures the length of time that
+			an animation should take to complete one cycle. */
+  animation-duration: 3s;
+
+  /* how the animation transitions through keyframes,
+      by establishing acceleration curves. */
+  /* linear */
+  animation-timing-function: cubic-bezier(0, 0, 1, 1);
+
+  animation-delay: 0.5s;
+
+  animation-iteration-count: infinite;
+
+  animation-direction: alternate;
+
+  animation-fill-mode: both;
+
+  animation-play-state: running;
+}
+
+@keyframes wtf {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  50% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(270deg);
+  }
+}
+```
+
+## Web Animations API
+
+`Element.animate(keyframes, options)`
+
+## `window.requestAnimationFrame`
+
+## GSAP
+
+- [GSAP](https://greensock.com/gsap/)

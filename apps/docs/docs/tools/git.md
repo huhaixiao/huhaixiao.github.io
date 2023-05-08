@@ -6,10 +6,54 @@
 - Staging area
 - Local repo
 - Remote repo
+- directed acyclic graph DAG 有向无环图
+- tree hash
+- commit hash
+- parent hash
 
 ```shell
 # 获取commit id
 git rev-parse --short HEAD～8
+```
+
+## git log
+
+```shell
+git log
+    --perl-regexp
+    --grep='^Revert'
+    --author='Zusheng Ma|Haixiao Hu'
+    --before=2023-01-01
+    --after=2022-12-26
+    --reverse
+    --shortstat
+    -g
+git log <commit>
+    --first-parent
+    --graph
+
+# git log invert grep
+git log -P --grep="regexp" --invert-grep
+
+# git log format
+git log --format=format:"%Cred%H%Creset%n%B"
+
+# tree hash
+git log --format=format:"%T"
+
+# compute file blob hash
+git hash-object <file-path>
+
+# 相当于 git cat-file -p
+git log --format=raw
+
+# 相当于 git show
+git log --patch --unified=0
+
+git blame <file>
+git blame <file> -L <line_number>
+
+git show <commit> --stat
 ```
 
 ## git bisect
@@ -29,48 +73,6 @@ git bisect reset
 ```shell
 git cherry-pick <commit>...
 git cherry-pick -n <commit>...
-```
-
-## todo
-
-
-
-- 三大分区
-  - 工作区(working tree) add
-  - 暂存区(stage) commit
-  - 版本区(commit)
-- working tree
-- git commit tree 本质是 DAG
-- directed acyclic graph DAG 有向无环图
-- HEAD
-  - The current branch.
-  - HEAD is a reference to one of the heads in your repository.
-  - except when using a detached HEAD.
-
-```shell
-cat .git/HEAD
-cat .git/COMMIT_EDITMSG
-git <command> -h
-git help <command>
-git cat-file -p <commit>
-
-git init
-git remote -v
-git add .
-git add -u
-git add <path>
-git blame <file>
-git blame <file> -L <line_number>
-
-# git checkout
-git checkout <branch_name>
-git checkout -
-git checkout -b <branch_name>
-git checkout -- <path>
-git checkout .
-
-# git show
-git show <commit> --stat
 
 # git revert
 # Revert some existing commits
@@ -83,20 +85,25 @@ git rebase <target-commit>
 git rebase --continue
 git rebase --abort
 git rebase HEAD~1 -i
+```
 
-# git log
-git log
-    --perl-regexp
-    --grep='^Revert'
-    --author='Zusheng Ma|Haixiao Hu'
-    --before=2023-01-01
-    --after=2022-12-26
-    --reverse
-    --shortstat
-    -g
-git log <commit>
-    --first-parent
-    --graph
+## git checkout
+
+```shell
+git checkout <branch_name>
+git checkout -
+git checkout -b <branch_name>
+git checkout -- <path>
+git checkout .
+```
+
+## TODO
+
+```shell
+git remote -v
+git add .
+git add -u
+git add <path>
 
 # git commit
 git commit

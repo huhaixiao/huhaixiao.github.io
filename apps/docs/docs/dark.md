@@ -1,8 +1,33 @@
 # 认知
 
-- One bite at a time
+## 大道至简
+
 - 人这一辈子都在为认知买单
 - 在一秒内看到本质的人，和花了半辈子也看不清一件事本质的人，自然是不一样的命运
+- One bite at a time
+- 简单的就是最好的
+- 重要的事只有一件
+- keep it simple stupid
+- 断舍离
+- 如无必要，勿增实体
+- 一次只做一件事
+- 检查清单
+- 结果导向
+- 利益导向
+- 资源导向
+- 智者惜口，愚者指点江山
+- 关我屁事，关你屁事
+- 将军赶路，不追小兔
+- 马行千里，不洗尘沙
+- 毫不内耗
+- 直言不讳
+
+## House Of Cards
+
+- In politics, you either eat the baby or you are the baby.
+- Do you think I'm a hypocrite? Well you should. I wouldn't disagree with you.
+- When money is coming your way, you don't ask question.
+- Shake with your right hand, but hold a in the left.
 
 ## 野心
 

@@ -79,18 +79,6 @@ const config = {
           },
           {
             type: "docSidebar",
-            sidebarId: "coding",
-            position: "left",
-            label: "coding"
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "computerScience",
-            position: "left",
-            label: "computer science"
-          },
-          {
-            type: "docSidebar",
             sidebarId: "tools",
             position: "left",
             label: "tools"

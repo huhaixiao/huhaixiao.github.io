@@ -1,0 +1,18 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Display
+
+// specify the element’s outer display type, which is essentially its role in flow layout.
+$display-outside: block;
+$display-outside: inline;
+
+// defines the type of formatting context that its contents are laid out in
+$display-inside : table;
+$display-inside : flex;
+
+$display-internal: table-cell;
+
+$display-legacy: inline-block;
+$display       : inline flow-root;
+
+.container {
+  display: $display;
+}

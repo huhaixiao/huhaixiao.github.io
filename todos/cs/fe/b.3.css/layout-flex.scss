@@ -1,0 +1,9 @@
+.flex-container {
+  display       : flex;
+  display       : inline-flex;
+  // defines main axis
+  flex-direction: row;
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
+}

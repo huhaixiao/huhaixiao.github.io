@@ -1,0 +1,8 @@
+/* 包含attr属性的元素 */
+[attr] {}
+
+/* 包含attr准确等于value的元素 */
+[attr="value"] {}
+
+/* 包含attr包含value的元素 */
+[attr~="value"] {}

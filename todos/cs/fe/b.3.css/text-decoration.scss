@@ -1,0 +1,41 @@
+.text {
+  // sets the horizontal spacing between text characters
+  letter-spacing: 0.5px;
+
+  // sets the horizontal alignment of a block
+  text-align: left;
+  text-align: right;
+  text-align: center;
+  text-align: justify;
+
+  /*
+   text-decoration-line
+   text-decoration-color
+   text-decoration-style
+   text-decoration-thickness
+  */
+  text-decoration: underline aqua wavy 3px;
+
+  text-decoration-line: overline;
+  text-decoration-line: line-through;
+  text-decoration-line: underline;
+  text-decoration-line: none;
+  text-decoration-line: overline line-through underline;
+
+  text-decoration-color: currentColor;
+
+  text-decoration-style: solid;
+  text-decoration-style: double;
+  text-decoration-style: dashed;
+  text-decoration-style: dotted;
+  text-decoration-style: wavy;
+
+  text-emphasis: dot;
+  text-emphasis-color: aqua;
+  text-emphasis-position: under;
+  text-emphasis-style: 'x';
+  -webkit-text-emphasis: dot;
+  -webkit-text-emphasis-color: aqua;
+  -webkit-text-emphasis-position: under;
+  -webkit-text-emphasis-style: 'x';
+}

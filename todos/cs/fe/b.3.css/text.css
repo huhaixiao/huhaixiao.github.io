@@ -1,0 +1,21 @@
+.text {
+  /* 两端对齐 */
+  text-align: justify;
+}
+
+/* 分散对齐1 */
+div.text {
+  text-align     : justify;
+  text-align-last: justify;
+}
+
+/* 分散对齐2 */
+div.text {
+  text-align: center;
+}
+
+div.text::after {
+  content: '';
+  width  : 100%;
+  display: inline-block;
+}

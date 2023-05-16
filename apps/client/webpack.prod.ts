@@ -2,6 +2,7 @@ import * as path from "path";
 import * as webpack from "webpack";
 import { merge } from "webpack-merge";
 import CopyPlugin from "copy-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import Config from "./webpack.common";
 
 const config: webpack.Configuration = merge(Config, {
@@ -16,6 +17,9 @@ const config: webpack.Configuration = merge(Config, {
         concurrency: 100,
       },
     }),
+    new BundleAnalyzerPlugin({
+      analyzerMode: "static",
+    })
   ],
   output: {
     path: path.resolve(__dirname, "dist"),

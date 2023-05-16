@@ -3,7 +3,7 @@
 import React from "react";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Index } from "./routes";
-import { Store } from "./routes/app-store";
+import { Store } from "./routes/antd-mobile";
 
 export const App = () => {
   const router = createHashRouter(

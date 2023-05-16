@@ -1,6 +1,5 @@
 import * as webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 // import { GenerateSW } from "workbox-webpack-plugin";
 
 const config: webpack.Configuration = {
@@ -9,9 +8,6 @@ const config: webpack.Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
-    }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static",
     }),
     // new GenerateSW({
     //   skipWaiting: true,

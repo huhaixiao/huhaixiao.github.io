@@ -30,6 +30,11 @@
 - USB-C接口（输入/输出）
 - Micro-USB接口（输入）
 
+## todo
+
+- ROG Ally
+- One Piece 1031
+
 ## dota
 
 ![dota](./dota-thumbnail.png)

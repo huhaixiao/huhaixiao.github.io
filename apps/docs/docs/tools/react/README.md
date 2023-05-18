@@ -1,20 +1,48 @@
 # React
 
-- [21 个 React 性能优化技巧](https://www.infoq.cn/article/kve8xtrs-upphptq5luz)
-- [ ] 虚拟滚动
-# 性能优化
-- React.memo
-- lazy
-- Suspense
-- React Fragments
-- no inline function
-- no inline style
+- [ ] 虚拟滚动组件封装
+- RC - Release Candidate
+- https://react.dev/
 
-RC - Release Candidate
+## Core
 
-# Suspense
+### Concurrency
 
-# Concurrent rendering...?
+- It’s a new behind-the-scenes mechanism that enables React to prepare multiple versions of your UI at the same time.
+- React uses sophisticated techniques like priority queues and multiple buffering.
+- A key property of Concurrent React is that rendering is interruptible.
+- `<Offscreen>`
+
+## APIs
+
+### lazy
+
+```tsx
+import { lazy, Suspense  } from 'react';
+
+const MarkdownPreview = lazy(() => import('./MarkdownPreview.js'));
+
+const Usage = () => (
+  <Suspense fallback={<Loading />}>
+    <h2>Preview</h2>
+    <MarkdownPreview />
+   </Suspense>
+)
+```
+
+### forwardRef
+
+### memo
+
+- Skipping re-rendering when props are unchanged
+
+```tsx
+import { memo } from 'react';
+
+const MemoizedComponent = memo(SomeComponent, arePropsEqual?)
+```
+
+
 
 concurrent features
 
@@ -36,6 +64,4 @@ react query
     * 高阶组件 具体低阶组件封装
     * 「高阶组件」无法直接将ref指向DOM
 
-```ts
-React.memo()
-```
+

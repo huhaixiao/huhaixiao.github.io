@@ -1,4 +1,6 @@
-# [Getting Started](https://create-react-app.dev/docs/getting-started)
+# Create React App
+
+- [Getting Started](https://create-react-app.dev/docs/getting-started)
 ```bash
 # If you've previsously installed create-react-app globally
 npm uninstall -g create-react-app
@@ -33,14 +35,14 @@ my-app
     └── setupTests.js
 ```
 
-# Folder Structure
+## Folder Structure
 
 - `public/index.html` is the page template
 - `src/index.js` is the javascript entry point
 - Only files inside `src` are processed by webpack
 - Only files inside `public` can be used from `public/index.html`
 
-# Available Scripts
+## Available Scripts
 
 - `npm test`
     Launches the test runner in the interactive watch mode.

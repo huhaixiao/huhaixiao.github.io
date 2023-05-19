@@ -1,7 +1,5 @@
 # Bulletproof React
 
-## React Component Structure
-
 ```tsx
 // 1. Imports - Prefer destructuring imports to minimize writen code
 import React, { PropsWithChildren, useState, useEffect } from "react";

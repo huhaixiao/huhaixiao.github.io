@@ -1,15 +1,10 @@
----
-title: 网络
-date: 2021-02-24 18:27:08
----
-
-# URL构成
+# network
 
 `http://www.xxx.com/index.html?name=xxx`
 协议 + 主机 + 路径 + 参数
 Protocol + Host + Path + Query String
 
-# OSI七层模型
+## OSI七层模型
 
 1. 应用层
 2. 表示层
@@ -19,16 +14,16 @@ Protocol + Host + Path + Query String
 6. 数据链路层
 7. 物理层
 
-# TCP/IP四层模型
+## TCP/IP四层模型
 
 1. 应用层
 2. 传输层
 3. 网络层
 4. 数据链路层
 
-# HTTP头字段
+## HTTP头字段
 
-## 通用头
+### 通用头
 
 - `Connection: keep-alive`
    1. HTTP长连接, 通过重用一个TCP连接来发送/接收多个HTTP请求, 来减少创建/关闭多个TCP连接的开销
@@ -38,7 +33,7 @@ Protocol + Host + Path + Query String
    5. HTTP/1.1 中默认开启除非 `Connection: close` 来关闭
    6. 服务器可以设置长连接的超时时间
 
-## 请求头
+### 请求头
 
 1. `Accept`
 2. `Accept-Encoding`
@@ -49,14 +44,14 @@ Protocol + Host + Path + Query String
 7. `Referer`
 8. `User-Agent`
 
-## 响应头
+### 响应头
 
 1. `Age`
 2. `Location`
 
-## 实体头
+### 实体头
 
-# HTTP状态码
+## HTTP状态码
 
 - 1XX - 请求正在处理
 - 2XX - 成功-请求被成功处理完毕
@@ -76,7 +71,7 @@ Protocol + Host + Path + Query String
   - 504 - Gateway Timeout
   - 505 - HTTP version not supported
 
-# axios
+## axios
 ```
 npm i axios
 ```

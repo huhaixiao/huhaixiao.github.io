@@ -1,4 +1,10 @@
-# Mac OS
+# osx
+
+- macOS
+- bash - Bourne Again SHell
+- ~/.bash_profile
+- ~/ 文件夹就是 /Users/haixhu/
+- /usr/local/bin/fastlane
 
 ## Shell
 
@@ -34,4 +40,48 @@ type pwd
 date
 cal
 echo $SHELL
+
+# log 输出到文件
+yarn ios > error.txt
+
+whoami
+
+ls -la
+ls -l <file>
+
+drwxrwxrwx
+
+groups $(whoami)
+
+id -a $(whoami)
+```
+
+## Homebrew
+
+- https://brew.sh
+
+```shell
+brew install nvm
+brew docs
+brew doctor
+brew tap --repair
+brew cleanup
+HOMEBREW_NO_INSTALL_CLEANUP
+```
+
+## Xcode
+
+- Xcode/product/clean Build Folder
+
+```shell
+# clear xcode cache
+rm -rf ~/Library/Developer/Xcode/DerivedData
+```
+
+### Xcode Command Line Tools
+
+- https://developer.apple.com/downloa/all/?q=xcode
+
+```shell
+xcode-select --install
 ```

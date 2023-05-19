@@ -10,6 +10,14 @@
 - tree hash
 - commit hash
 - parent hash
+- gitHub/CODEOWNERS
+- git-lfs Git Large File Storage
+- git lfs install
+- brew install git-lfs
+- SSH keys
+- Personal Access Token 
+  - 临时token取代密码
+  - 可以设置token的权限
 
 ```shell
 # 获取commit id

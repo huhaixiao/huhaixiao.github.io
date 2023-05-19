@@ -8,3 +8,7 @@
 - in place
 - monolithic
 - arity
+- a plethora of
+- clarity 
+- boot
+- lane

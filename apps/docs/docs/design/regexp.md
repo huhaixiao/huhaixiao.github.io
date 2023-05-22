@@ -43,3 +43,33 @@ while(simpleSticky.test(str)) {
 }
 simpleMulti.test(str)
 ```
+
+## Assertions
+
+### Boundary-type assertions
+
+- `^`
+  - matches the beginning of input
+- `$`
+  - matches the end of input
+- `\b`
+  - matches a word boundary
+- `\B`
+  - matches a non-word boundary
+
+### Other assertions
+
+- `x(?=y)`
+  - lookahead assertion
+- `x(?!y)`
+  - negative lookahead assertion
+- `(?<=y)x`
+  - lookbehind assertion
+- `(?<!y)x`
+  - negative lookbehind assertion
+
+## Character classes
+
+## Groups and backreferences
+
+## Quantifiers

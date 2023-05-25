@@ -573,3 +573,19 @@ var son = new Son('son', 18)
 
 son.talk()
 ```
+
+## Don’t use third-party libraries directly
+
+Instead of importing the third-party libraries directly, re-export them in one centralised place.
+
+_src/lib/store.ts_
+
+```js
+export { useDispatch, useSelector ｝ from 'react-redux';
+```
+
+_src/lib/query.ts_
+
+```js
+export { useQuery, useMutation, useQueryClient } from 'react-query';
+```

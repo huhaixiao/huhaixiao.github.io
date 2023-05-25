@@ -37,6 +37,11 @@
 
 ## todo
 
-- ROG Ally
+- win掌机
 - One Piece 1031
 - 银河护卫队3
+
+## 北京新能源
+    1. [官网](https://apply.jtw.beijing.gov.cn/apply/app/person/manage/060nC1C1AnAi2e18ChP21h2CnA1PA611?personTypes=BSHJ&personTypes=JJ&personTypes=ZZZ&personTypes=GZJZZ)
+    2. 个人申请编码：0048110843705
+    3. 申请状态：已提交，待审核。审核结果将于2021年11月09日公布。

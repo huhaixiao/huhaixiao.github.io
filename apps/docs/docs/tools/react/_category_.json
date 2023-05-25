@@ -1,8 +1,8 @@
 {
-  "position": 1,
+  "position": 2000,
   "label": "React",
   "collapsible": true,
-  "collapsed": false,
+  "collapsed": true,
   "className": "red",
   "link": {
     "type": "generated-index",

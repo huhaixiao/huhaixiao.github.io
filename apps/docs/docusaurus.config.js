@@ -68,6 +68,12 @@ const config = {
         items: [
           {
             type: "docSidebar",
+            sidebarId: "computer",
+            position: "left",
+            label: "Computer"
+          },
+          {
+            type: "docSidebar",
             sidebarId: "algorithm",
             position: "left",
             label: "algorithm"
@@ -96,47 +102,47 @@ const config = {
             label: "math"
           }
         ]
-      },
-      footer: {
-        style: "dark",
-        links: [
-          {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/huhaixiao"
-              },
-              {
-                label: "LeetCode-cn",
-                href: "https://leetcode.cn/u/haixhu/"
-              },
-              {
-                label: "gitee update",
-                href: "https://gitee.com/huhaixiao/huhaixiao/pages"
-              },
-              {
-                label: "语雀",
-                href: "https://www.yuque.com/dashboard"
-              }
-            ]
-          },
-          {
-            title: "docs",
-            items: [
-              {
-                label: "help",
-                href: "https://docusaurus.io/"
-              }
-            ]
-          }
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme
       }
+      // footer: {
+      //   style: "dark",
+      //   links: [
+      //     {
+      //       title: "More",
+      //       items: [
+      //         {
+      //           label: "GitHub",
+      //           href: "https://github.com/huhaixiao"
+      //         },
+      //         {
+      //           label: "LeetCode-cn",
+      //           href: "https://leetcode.cn/u/haixhu/"
+      //         },
+      //         {
+      //           label: "gitee update",
+      //           href: "https://gitee.com/huhaixiao/huhaixiao/pages"
+      //         },
+      //         {
+      //           label: "语雀",
+      //           href: "https://www.yuque.com/dashboard"
+      //         }
+      //       ]
+      //     },
+      //     {
+      //       title: "docs",
+      //       items: [
+      //         {
+      //           label: "help",
+      //           href: "https://docusaurus.io/"
+      //         }
+      //       ]
+      //     }
+      //   ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`
+      // },
+      // prism: {
+      //   theme: lightCodeTheme,
+      //   darkTheme: darkCodeTheme
+      // }
     }),
 
   stylesheets: [

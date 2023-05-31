@@ -8,18 +8,20 @@ import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+
+  // return null;  
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className="container">
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
-          {/* <Link
+          <Link
             className="button button--secondary button--lg"
             to="/docs/algorithm"
           >
             Algorithm
-          </Link> */}
+          </Link>
         </div>
       </div>
     </header>

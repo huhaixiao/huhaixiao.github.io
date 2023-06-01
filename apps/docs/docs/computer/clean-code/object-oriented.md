@@ -4,52 +4,83 @@
 
 ```ts
 class Student {
-    private name: string
-    private age: number
+  private name: string;
 
-    constructor(name: string, age: number) {
-        this.name = name
-        this.age = age
-    }
+  constructor(name: string) {
+    this.name = name;
+  }
 
-    public getName(): string {
-        return this.name
-    }
+  public getName(): string {
+    return this.name;
+  }
 
-    public setName(name: string) {
-        this.name = name
-    }
-
-    public getAge(): number {
-        return this.age
-    }
-
-    public setAge(age: number) {
-        this.age = age
-    }
+  public setName(name: string) {
+    this.name = name;
+  }
 }
+```
+
+```ts
+function Student(name) {
+  this.name = name;
+}
+
+Student.prototype.getName = function () {
+  return this.name;
+};
+Student.prototype.setName = function (name) {
+  this.name = name;
+};
+
 ```
 
 ## Inheritance
 
 ```ts
 class BoyStudent extends Student {
-    private gender: 'boy'
-    constructor(name: string, age: number) {
-        super(name, age)
-        this.gender = 'boy'
-    }
+  private age: number;
+  constructor(name: string, age: number) {
+    super(name);
+    this.age = age;
+  }
+
+  public getAge() {
+    return this.age;
+  }
+
+  public setAge(age: number) {
+    this.age = age;
+  }
 }
+
+```
+
+```ts
+function inherit(SubClass, SupClass) {
+  const proto = {}
+  Object.setPrototypeOf(proto, SupClass.prototype)
+  SubClass.prototype = proto;
+  SubClass.prototype.constructor = SubClass;
+}
+
+function BoyStudent(name, age) {
+  Student.call(this, name);
+  this.age = age;
+}
+
+inherit(BoyStudent, Student);
+
+BoyStudent.prototype.getAge = function () {
+  return this.age;
+};
+
+BoyStudent.prototype.setAge = function (age) {
+  this.age = age;
+};
 ```
 
 ## Polymorphism
 
 ```ts
-class BoyStudent extends Student {
-    private gender: 'boy'
-    constructor(name: string, age: number) {
-        super(name, age)
-        this.gender = 'boy'
-    }
-}
+const boyStudent: Student = new BoyStudent("boyStudent", 12);
 ```

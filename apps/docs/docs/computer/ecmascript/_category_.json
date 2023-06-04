@@ -1,0 +1,10 @@
+{
+  "position": 10,
+  "label": "ECMAScript",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "ECMAScript"
+  }
+}

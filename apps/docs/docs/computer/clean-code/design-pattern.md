@@ -5,7 +5,106 @@
 
 ## Creational Design Patterns
 
+- factory method - `getProduct()`
+- singleton - `private constructor`
+- prototype - `clone`
+- builder
+  - 子类可能过多的时候
+  - 通过Director主管控制实例的生成
+- abstract factory - `getFactory()`
+- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+### Factory-function
+> 把实例化的过程交给工厂方法
+
+```typescript
+class Factory{
+    getProduct(type, data): Car {
+        if(type === 'bmw') return new BMW(data)
+        if(type === 'benz') return new BENZ(data)
+    }
+}
+
+interface Car{
+    type: string;
+    data: any;
+}
+```
+
+### Singleton
+> 让你能够保证一个类只有一个实例， 并提供一个访问该实例的全局节点。
+
+```typescript
+class Singleton{
+    private static instance = null
+    private static getInstance() {
+        if(!this.instance) {
+            this.instance = new Singleton
+        }
+
+        return this.instance
+    }
+    private constructor() {}
+}
+```
+
+### Builder
+> 可能存在的子类过多时
+
+```javascript
+class HouseBuilder{
+    constructor() {}
+
+    buildWalls() {}
+    buildDoors() {}
+    buildRoof() {}
+    buildGarage() {}
+}
+```
+
+### Prototype
+
+```javascript
+const proto = new Prototype
+const clone = proto.clone()
+```
+
 ## Structural Design Patterns
+
+- decorator - 对实例的公共接口进行二次封装(装饰)
+- adapter - `class Adapter extends Target`
+- facade - 为多个复杂的子系统, 提供一个一致的接口
+- composite - 组合模式, 部分整体模式, 所有节点实现相同接口, 有`add()`和`remove()`
+- bridge - `抽象API指向具体实现, 隔离实现代码`
+  与策略模式的区别, bridge是一次性的修改实现, 策略是实现的切换
+- flyweight - 享元, 共享内存
+- proxy - 代理, 减少开销
+
+
+### Adapter
+
+```javascript
+class Target {
+    request() {}
+}
+
+class Adaptee {
+    request() {}
+}
+
+class Adapter extends Target {
+    private adaptee: Adaptee = null
+
+    constructor(adaptee) {
+        super()
+        this.adaptee = adaptee
+    }
+
+    request() {
+        this.adaptee.request()
+    }
+}
+```
 
 ### Decorator
 
@@ -39,6 +138,68 @@ class Decorator implements Component {
 ```
 
 ## Behavioral Design Patterns
+
+- Chain of Responsibility - is a behavioral design pattern that lets you pass requests along a chain of handlers. Upon receiving a request, each handler decides either to process the request or to pass it to the next handler in the chain.
+- Mediator
+- Memento - TODO
+- Observer
+- State - 实例状态不同, 实现不同
+- Strategy - 动态改变实现
+- Template Method
+  - defines the skeleton of an algorithm in the superclass
+  - but lets subclasses override specific steps of the algorithm without changing its structure.
+- Visitor - separate algorithms from the objects on which they operate.
+
+```js
+// State
+class Car {
+
+}
+// Strategy
+class Car {
+  constructor(runStrategy) {
+    this.setMaintainStrategy()
+    this.setRunStrategy(runStrategy)
+  }
+
+  setRunStrategy(runStrategy) {
+    this.runStrategy = runStrategy
+  }
+
+  run() {
+    this.runStrategy.run()
+  }
+}
+
+// Template Method
+class Super {
+  strategy() {
+    action1()
+    action2()
+  }
+}
+
+class Sub1 extends Super {
+  action1() {}
+  action2() {}
+}
+
+class Sub2 extends Super {
+  action1() {}
+  action2() {}
+}
+
+// Visitor
+function visitor(user) {
+
+}
+
+class User {
+  action() {
+    visitor(this)
+  }
+}
+```
 
 ### Observer
 

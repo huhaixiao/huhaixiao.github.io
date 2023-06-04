@@ -1,14 +1,13 @@
 {
-  "position": 2000,
+  "position": 100,
   "label": "React",
   "collapsible": true,
   "collapsed": true,
-  "className": "red",
   "link": {
     "type": "generated-index",
-    "title": "React Contents"
+    "title": "React"
   },
   "customProps": {
-    "description": "React"
+    "description": "React description"
   }
 }

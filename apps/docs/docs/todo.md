@@ -1,45 +1,8 @@
-- [ ] BFF backend for frontend
-- [ ] 接口聚合
-- [ ] restful user get post
-- [ ] not restful getUser postUser
-
-- PNG Portable Network Graphics
-- jwt-decode
-- js-cookie
-
-- TDS 学习
-- Jekins 学习
-- Typescript 学习
-    - [ ]  [Type Manipulation](https://www.typescriptlang.org/docs/handbook/2/types-from-types.html)
-- [Inside Tesla Todo](https://inside.tesla.cn/zh-CN/home)
-
-- 保定公积金取消
-- 档案在哪
-    - 0312-5062155 保定市人力资源和社会保障局
-    - [ ]  代理协议在哪
-- Polynomial Runtime
-
-# 网络
-
-- Access-Control-Allow-Origin
-- XSS
-- Content Security Policy
-- Same Origin Policy
-
-// 金本位
-// 亚当 斯密 看不见的手
-// 农业革命
-// 工业革命
-// 经济学
-// ## 理论经济学
-// ## 应用经济学
-
 # form
 
 - Resources
-    
     [Your first form](https://developer.mozilla.org/en-US/docs/Learn/Forms/Your_first_form)
-    
+
 - nesting a form inside another form is forbidden.
 - It’s always possible to use a form control outside of a `<form>` element.
     - that control has nothing todo with any form.
@@ -65,10 +28,6 @@
     - `<button type="reset">Reset</button>`
     - `<button>` beats `<input type="submit">`
 - `<fieldset>`
-
-国风美唐大门415527
-
-iPad密码: LiuKun19920514
 
 - 生存空间：忍人所不忍，能人所不能
 - 干好事：别太把自己当人，别太把别人不当人

@@ -3,26 +3,26 @@ import clsx from "clsx";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
+import { Redirect } from "@docusaurus/router";
 
 import styles from "./index.module.css";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
 
-  // return null;
   return (
     <header className={clsx("hero", styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
-        <div className={styles.buttons}>
-          {/* <Link
+        <h1>{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        {/* <Link
             className="button button--secondary button--lg"
             to="/docs/algorithm"
           >
             Algorithm
+
           </Link> */}
-        </div>
+        <div className={styles.buttons}></div>
       </div>
     </header>
   );
@@ -36,7 +36,7 @@ export default function Home(): JSX.Element {
       description="Description will go into a meta tag in <head />"
     >
       <HomepageHeader />
-      {/* <main>
+      <main>
         <Link
           className="button button--secondary button--lg"
           to="https://react.dev"
@@ -45,11 +45,11 @@ export default function Home(): JSX.Element {
         </Link>
         <Link
           className="button button--secondary button--lg"
-          to="https://jest.io"
+          to="https://jestjs.io"
         >
           Jest
         </Link>
-      </main> */}
+      </main>
     </Layout>
   );
 }

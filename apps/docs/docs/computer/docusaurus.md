@@ -1,6 +1,8 @@
 # Docusaurus
 
 - https://docusaurus.io/
+- [Client API](https://docusaurus.io/docs/docusaurus-core)
+- By default, any Markdown or JavaScript file starting with _ will be ignored and no routes will be created for that file (see the exclude option).
 
 ```md
 ---

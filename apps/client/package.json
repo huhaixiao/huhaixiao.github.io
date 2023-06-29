@@ -24,6 +24,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2",
     "styled-components": "^5.3.6",
+    "swiper": "^9.4.1",
     "webpack-bundle-analyzer": "^4.8.0",
     "workbox-webpack-plugin": "^6.5.4"
   },

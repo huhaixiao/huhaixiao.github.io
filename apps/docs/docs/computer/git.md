@@ -95,7 +95,8 @@ git log
 git log <commit>
     --first-parent
     --graph
-
+# log reflog
+git log -g
 # git log invert grep
 git log -P --grep="regexp" --invert-grep
 
@@ -210,6 +211,8 @@ git pull --rebase --autostash
 git push origin HEAD
 git reflog
 git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
 git rev-list --all --count --author=huhaixiao
 
 # git subtree

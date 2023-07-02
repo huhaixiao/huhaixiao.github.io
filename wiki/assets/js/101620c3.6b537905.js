@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5492],{7112:s=>{s.exports=JSON.parse('{"title":"CSS","description":"CSS","slug":"/category/css","permalink":"/wiki/docs/category/css","navigation":{"previous":{"title":"web-assembly","permalink":"/wiki/docs/fe/js/web-assembly"},"next":{"title":"README","permalink":"/wiki/docs/fe/css/"}}}')}}]);

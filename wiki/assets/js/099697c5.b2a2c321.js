@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5460],{813:t=>{t.exports=JSON.parse('{"title":"Algorithm","description":"5 minutes to learn the most important Docusaurus concepts.","slug":"/category/algorithm","permalink":"/wiki/docs/category/algorithm","navigation":{"next":{"title":"Backtrack","permalink":"/wiki/docs/algorithm/backtrack"}}}')}}]);

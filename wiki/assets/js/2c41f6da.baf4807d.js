@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[537],{3092:t=>{t.exports=JSON.parse('{"title":"Data Structure","description":"Data Structure","slug":"/category/data-structure","permalink":"/wiki/docs/category/data-structure","navigation":{"next":{"title":"LRUCache","permalink":"/wiki/docs/algorithm/data-structure/least-recently-used"}}}')}}]);

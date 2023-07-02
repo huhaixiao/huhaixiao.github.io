@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[906],{6:e=>{e.exports=JSON.parse('{"title":"React Contents","slug":"/category/react","permalink":"/wiki/docs/category/react","navigation":{"next":{"title":"React","permalink":"/wiki/docs/tools/react/"}}}')}}]);

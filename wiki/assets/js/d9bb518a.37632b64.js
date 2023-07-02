@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[2238],{7325:e=>{e.exports=JSON.parse('{"title":"Clean Code","slug":"/category/clean-code","permalink":"/wiki/docs/category/clean-code","navigation":{"next":{"title":"Design Pattern","permalink":"/wiki/docs/computer/clean-code/design-pattern"}}}')}}]);

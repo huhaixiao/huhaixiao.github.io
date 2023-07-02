@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[987],{4781:s=>{s.exports=JSON.parse('{"label":"Easy","permalink":"/wiki/docs/tags/easy","allTagsPath":"/wiki/docs/tags","count":1,"items":[{"id":"algorithm/doc-with-tags","title":"A doc with tags","description":"Create a doc page with rich content.","permalink":"/wiki/docs/"}]}')}}]);

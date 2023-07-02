@@ -1,0 +1,22 @@
+{
+  "name": "Docusaurus v2",
+  "short_name": "Docusaurus",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "./",
+  "start_url": "./index.html",
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://docusaurus.io/manifest.json"
+    }
+  ],
+  "icons": [
+    {
+      "src": "img/icon.jpg",
+      "sizes": "180x180",
+      "type": "image/jpg"
+    }
+  ]
+}

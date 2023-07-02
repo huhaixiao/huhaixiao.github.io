@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[8354],{1586:s=>{s.exports=JSON.parse('{"title":"css","description":"css","slug":"/category/css","permalink":"/wiki/docs/category/css","navigation":{"previous":{"title":"Link","permalink":"/wiki/docs/coding/html/link"},"next":{"title":"README","permalink":"/wiki/docs/coding/css/"}}}')}}]);

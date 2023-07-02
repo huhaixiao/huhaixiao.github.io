@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[5947],{5125:e=>{e.exports=JSON.parse('{"title":"network","description":"network","slug":"/category/network","permalink":"/wiki/docs/category/network","navigation":{"next":{"title":"README","permalink":"/wiki/docs/computer science/net/"}}}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4413],{2016:e=>{e.exports=JSON.parse('{"title":"React","slug":"/category/react","permalink":"/wiki/docs/category/react","navigation":{"previous":{"title":"RegExp","permalink":"/wiki/docs/computer/ecmascript/regexp"},"next":{"title":"react@18.2.0","permalink":"/wiki/docs/computer/react/"}}}')}}]);

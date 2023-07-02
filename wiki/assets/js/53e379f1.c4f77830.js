@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[9257],{8335:s=>{s.exports=JSON.parse('{"title":"JavaScript","description":"JavaScript","slug":"/category/javascript","permalink":"/wiki/docs/category/javascript","navigation":{"next":{"title":"constructor","permalink":"/wiki/docs/fe/js/Classes"}}}')}}]);

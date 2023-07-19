@@ -1,25 +1,16 @@
-import React, { StrictMode, Suspense, useLayoutEffect } from "react";
-import { Outlet } from "react-router-dom";
-import { ThemeContextProvider } from "../hooks/theme";
+// https://reactjs.org/docs/code-splitting.html
+// https://beta.reactjs.org/reference/react/Suspense
+import React from "react";
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import { Home } from "./home/";
 
-const Loading = () => {
-  return <span>loading...</span>;
-};
+export const App = () => {
+  const router = createHashRouter([
+    {
+      path: "/",
+      element: <Home />,
+    }
+  ]);
 
-export const Index = () => {
-  useLayoutEffect(() => {
-    document.body.classList.add("bg-white", "dark:bg-black");
-  }, []);
-  return (
-    <StrictMode>
-      <Suspense fallback={<Loading />}>
-        <ThemeContextProvider>
-          <div className="bg-white dark:bg-black"></div>
-          <div className="p-6">
-            <Outlet />
-          </div>
-        </ThemeContextProvider>
-      </Suspense>
-    </StrictMode>
-  );
+  return <RouterProvider router={router} />;
 };

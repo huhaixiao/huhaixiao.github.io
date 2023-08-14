@@ -1,6 +1,7 @@
 # React Native
 
 - https://reactnative.dev/
+- RN App 安装完成后能连上Metro服务即可，无需重新安装App
 
 ## Environment Setup
 
@@ -56,4 +57,26 @@ npx react-native run-ios --scheme "Scheme"
 .ios.js
 .android.js
 .native.js
+```
+
+## API
+
+```ts
+interface ILayoutProps {
+  alignContent?: 'flex-start' | 'flex-end'
+}
+// fullsize
+
+StyleSheet.create({
+  full: {
+    flex: 1,
+    alignItems: "stretch"
+  }
+})
+```
+
+## CLI
+
+```shell
+npx react-native@latest init AwesomeProject
 ```

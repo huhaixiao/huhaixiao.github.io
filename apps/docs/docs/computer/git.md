@@ -80,6 +80,53 @@ Date:   Thu Jun 29 22:27:13 2023 +0800
     setup
 ```
 
+## git clean
+
+```shell
+# --dry-run
+git clean <pathspec> -n
+# --interactive
+git clean <pathspec> -i
+# --force
+git clean <pathspec> -f
+# specifiy -d to recursive into directories
+git clean -d -f
+# -x, git ignored files are also removed
+git clean -d -f -x
+```
+
+## git branch
+
+```shell
+git branch --set-upstream-to=origin/remote-branch-name local-branch-name
+# git delete branches match pattern
+git branch | grep "branch-name regexp" | xargs git branch -D
+# git delete branch except match pattern
+git branch | grep -v "branch-name regexp" | xargs git branch -D
+```
+
+## git tag
+
+```shell
+git tag
+git tag <tag-name> -f -m "tag-message"
+git tag <tag-name> <commit-id>
+git tag -d <tag-name>
+# reedit tag message
+git tag <tag-name> <tag-name>^{} -f -m "<new-message>"
+
+git show <tag-name>
+git push origin <tag-name>
+git push origin --tags
+```
+
+## git rebase
+
+```shell
+git rebase <commit-id> --autostash
+git rebase -i HEAD~128
+```
+
 ## git log
 
 ```shell

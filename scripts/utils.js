@@ -7,11 +7,11 @@ function runCLI (cli) {
   });
 }
 
-function open(url) {
-  childProcess.exec(`start ${url}`);
+function openURL (url) {
+  runCLI(`start ${url}`);
 }
 
 module.exports = {
   runCLI,
-  open,
+  openURL
 };

@@ -1,7 +1,7 @@
 const process = require("process");
 const path = require("path");
 const fs = require("fs");
-const { runCLI, open } = require("./utils");
+const { runCLI, openURL } = require("./utils");
 
 function changeDir () {
   const clientDir = path.resolve(process.cwd(), "./apps/client/dist");
@@ -24,7 +24,7 @@ async function workSpaceClientGitPush () {
     await runCLI("git push github HEAD -f");
     await runCLI("git push gitee HEAD -f");
     console.log("publish success");
-    open("https://gitee.com/huhaixiao/huhaixiao/pages");
+    openURL("https://gitee.com/huhaixiao/huhaixiao/pages");
   } catch (e) {
     console.log(e);
     console.log("publish failed");

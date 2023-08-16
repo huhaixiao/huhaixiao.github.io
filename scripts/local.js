@@ -1,14 +1,18 @@
-const { runCLI } = require("./utils");
+const { runAliveCLI } = require("./utils");
 
 async function main () {
-  const clientProcess = await runCLI("pnpm --filter client start");
-  clientProcess.stdout.on("data", (data) => {
-    console.log(`client output: ${data.toString()}`);
-  });
-  const docsProcess = await runCLI("pnpm --filter docs start");
-  docsProcess.stdout.on("data", (data) => {
-    console.log(`docs output: ${data.toString()}`);
-  });
+  try {
+    const clientProcess = await runAliveCLI("pnpm --filter client start");
+    const docsProcess = await runAliveCLI("pnpm --filter docs start");
+    clientProcess.stdout.on("data", (data) => {
+      console.log(`client output: ${data.toString()}`);
+    });
+    docsProcess.stdout.on("data", (data) => {
+      console.log(`docs output: ${data.toString()}`);
+    });
+  } catch (e) {
+    console.log({ e });
+  }
 }
 
 main();

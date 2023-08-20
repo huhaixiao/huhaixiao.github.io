@@ -1,4 +1,8 @@
-# React Native
+---
+draft: true
+---
+
+# Setup
 
 - https://reactnative.dev/
 - RN App 安装完成后能连上Metro服务即可，无需重新安装App

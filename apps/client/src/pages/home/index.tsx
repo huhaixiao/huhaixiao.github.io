@@ -1,5 +1,5 @@
 import React, { StrictMode, Suspense, useLayoutEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import { ThemeContextProvider } from "../../hooks/theme";
 
 const Loading = () => {
@@ -15,12 +15,15 @@ export const Home = () => {
       <Suspense fallback={<Loading />}>
         <ThemeContextProvider>
           <div className="bg-black dark:bg-black"></div>
-          <div className="p-6">
+          <div className="p-6 grid grid-cols-2 gap-x-2">
             <a className="text-white" href="/wiki/" target="_blank">
               one
             </a>
-            <Outlet />
+            <Link className="text-white" to="checklist">
+              checklist
+            </Link>
           </div>
+          <Outlet />
         </ThemeContextProvider>
       </Suspense>
     </StrictMode>

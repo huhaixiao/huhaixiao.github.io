@@ -1,0 +1,13 @@
+{
+  "position": 1,
+  "label": "React Native",
+  "collapsible": true,
+  "collapsed": true,
+  "link": {
+    "type": "generated-index",
+    "title": "React"
+  },
+  "customProps": {
+    "description": "React description"
+  }
+}

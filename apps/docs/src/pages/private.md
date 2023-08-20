@@ -72,11 +72,6 @@ f2269c78ef4c8878e4ca8fe1b4250ac77dd9ad985aec4f59b1e283e2c461500c
 - USB-C接口（输入/输出）
 - Micro-USB接口（输入）
 
-## dota
-
-![dota](./dota-thumbnail.png)
-![dota table](./dota-detail-list.png)
-
 ## 保定公积金取消
 - 档案在哪
     - 0312-5062155 保定市人力资源和社会保障局

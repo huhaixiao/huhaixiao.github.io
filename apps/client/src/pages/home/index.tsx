@@ -16,7 +16,7 @@ export const Home = () => {
         <ThemeContextProvider>
           <div className="bg-black dark:bg-black"></div>
           <div className="p-6 grid grid-cols-2 gap-x-2">
-            <a className="text-white" href="/wiki/" target="_blank">
+            <a className="text-white" href="/core/" target="_blank">
               one
             </a>
             <Link className="text-white" to="checklist">

@@ -9,7 +9,7 @@ function changeDir () {
 }
 
 function copyDocs () {
-  fs.cpSync("./apps/docs/build", "./apps/client/dist/wiki", { recursive: true });
+  fs.cpSync("./apps/docs/build", "./apps/client/dist/core", { recursive: true });
 }
 
 async function workSpaceClientGitPush () {

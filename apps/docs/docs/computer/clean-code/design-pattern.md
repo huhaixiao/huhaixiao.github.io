@@ -5,34 +5,23 @@
 
 ## Creational Design Patterns
 
-- factory method - `getProduct()`
-- singleton - `private constructor`
-- prototype - `clone`
-- builder
-  - 子类可能过多的时候
-  - 通过Director主管控制实例的生成
-- abstract factory - `getFactory()`
-- [Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
 ### Factory-function
-> 把实例化的过程交给工厂方法
 
 ```typescript
+interface Car{
+    type: string;
+    data: any;
+}
+
 class Factory{
     getProduct(type, data): Car {
         if(type === 'bmw') return new BMW(data)
         if(type === 'benz') return new BENZ(data)
     }
 }
-
-interface Car{
-    type: string;
-    data: any;
-}
 ```
 
 ### Singleton
-> 让你能够保证一个类只有一个实例， 并提供一个访问该实例的全局节点。
 
 ```typescript
 class Singleton{
@@ -49,7 +38,6 @@ class Singleton{
 ```
 
 ### Builder
-> 可能存在的子类过多时
 
 ```javascript
 class HouseBuilder{

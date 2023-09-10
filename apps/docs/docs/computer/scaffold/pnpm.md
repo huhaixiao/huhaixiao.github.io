@@ -7,6 +7,7 @@
 | `pnpm add -g <pkg>` | Install package globally  |
 
 ```shell
+pnpm add <pkg>
 pnpm install
 pnpm <cmd>
 pnpm config set store-dir /path/to/.pnpm-store

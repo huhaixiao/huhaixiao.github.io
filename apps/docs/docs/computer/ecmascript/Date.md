@@ -1,3 +1,6 @@
+# Date
+
+- ISO8601
 - `var d = new Date; d.toISOString()`
 - `YYYY-MM-DDTHH:MM:SS.SSS+HH:MM;`
 - `2012-10-01T09:45:00.000+09:00` 东9区

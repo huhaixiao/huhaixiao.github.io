@@ -1,0 +1,25 @@
+# Binary Tree Paths
+
+Given the root of a binary tree, return all root-to-leaf paths in any order.
+
+A leaf is a node with no children.
+
+```ts
+/**
+ * Definition for a binary tree node.
+ * class TreeNode {
+ *     val: number
+ *     left: TreeNode | null
+ *     right: TreeNode | null
+ *     constructor(val?: number, left?: TreeNode | null, right?: TreeNode | null) {
+ *         this.val = (val===undefined ? 0 : val)
+ *         this.left = (left===undefined ? null : left)
+ *         this.right = (right===undefined ? null : right)
+ *     }
+ * }
+ */
+
+function binaryTreePaths(root: TreeNode | null): string[] {
+  
+};
+```

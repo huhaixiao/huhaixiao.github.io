@@ -68,33 +68,15 @@ const config = {
         items: [
           {
             type: "docSidebar",
-            sidebarId: "computer",
+            sidebarId: "jic",
             position: "left",
-            label: "Computer"
+            label: "Just in case"
           },
           {
             type: "docSidebar",
-            sidebarId: "algorithm",
+            sidebarId: "jit",
             position: "left",
-            label: "algorithm"
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "tools",
-            position: "left",
-            label: "tools"
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "english",
-            position: "right",
-            label: "english"
-          },
-          {
-            type: "docSidebar",
-            sidebarId: "math",
-            position: "right",
-            label: "math"
+            label: "Just in time"
           }
         ]
       },

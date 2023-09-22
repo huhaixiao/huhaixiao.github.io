@@ -1,13 +1,6 @@
----
-title: 基础
-date: 2021-02-27 19:44:26
-tags: algo
-mathjax: true
----
-
-https://leetcode-cn.com/leetbook/detail/journey-of-algorithm/
-
 # 算法复杂度分析
+
+- https://leetcode-cn.com/leetbook/detail/journey-of-algorithm/
 
 ## 时间复杂度分析
 

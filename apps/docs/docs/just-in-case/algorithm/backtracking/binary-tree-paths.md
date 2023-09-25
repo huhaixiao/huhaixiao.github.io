@@ -1,8 +1,10 @@
 # Binary Tree Paths
 
-Given the root of a binary tree, return all root-to-leaf paths in any order.
+- https://leetcode.cn/problems/binary-tree-paths/
 
-A leaf is a node with no children.
+> Given the root of a binary tree,
+> return all root-to-leaf paths in any order.
+> A leaf is a node with no children.
 
 ```ts
 /**
@@ -20,6 +22,32 @@ A leaf is a node with no children.
  */
 
 function binaryTreePaths(root: TreeNode | null): string[] {
-  
+  const result: string [] = []
+  const path: number[] = []
+
+  backtrack(root, path, result);
+
+  return result
 };
+
+function backtrack(root: TreeNode | null, path: number[], result: string[]) {
+    if(!root) {
+      return;
+    }
+    if(!root.left && !root.right) {
+        path.push(root.val);
+        result.push(path.join('->'));
+        path.pop();
+    }
+    if(root.left) {
+      path.push(root.val);
+      backtrack(root.left, path, result);
+      path.pop();
+    }
+    if(root.right) {
+      path.push(root.val)
+      backtrack(root.right, path, result);
+      path.pop();
+    }
+}
 ```

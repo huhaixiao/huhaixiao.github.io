@@ -6,4 +6,7 @@ apt install nodejs
 
 # checkout architecture
 arch
+
+# checkout shell type
+echo $0
 ```

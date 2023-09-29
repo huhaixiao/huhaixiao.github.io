@@ -15,4 +15,12 @@ git branch --edit-description
 git branch --merged
 git branch -d <branch_name>...
 git branch -D <branch_name>...
+git branch --merged
+git branch --no-merged
+git branch --contains <commit>
+git branch --no-contains <commit>
+git branch -m <old_branch> <new_branch>
+git branch -M <old_branch> <new_branch>
+git branch --unset-upstream
+git branch --set-upstream-to=<remote>/<branch>
 ```

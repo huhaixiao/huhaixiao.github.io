@@ -1,3 +1,4 @@
+# webpack
 
 https://nodejs.org/api/process.html#process_process_env
 
@@ -12,7 +13,7 @@ https://nodejs.org/api/process.html#process_process_env
 - `file-loader`
 - `babel-loader`
 
-# [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+## [webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
 
 ```
 npm i -D webpack-dev-server
@@ -161,8 +162,8 @@ https://www.typescriptlang.org/docs/handbook/declaration-files/publishing.html
 
 - [What is a webpack Module](https://webpack.js.org/concepts/modules/#what-is-a-webpack-module)
   - An [ES2015 import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statement
-  - A [CommonJS](www.commonjs.org/specs/modules/1.0/) `require()` statement
-  - An [AMD]()
+  - A [CommonJS](https://www.commonjs.org/specs/modules/1.0/) `require()` statement
+  - An AMD
 
 ## [Tree Shaking](https://webpack.js.org/guides/tree-shaking/)
 

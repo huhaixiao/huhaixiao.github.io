@@ -1,8 +1,4 @@
----
-title: 工具
-date: 2021-02-28 00:00:01
-tags: fe
----
+# 工具
 
 - idempotent - 幂等
 - DRY

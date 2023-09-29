@@ -15,6 +15,7 @@ git log
     -g
     --first-parent
     --graph
+    --all-match
     
 # log reflog
 git log -g

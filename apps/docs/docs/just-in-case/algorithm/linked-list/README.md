@@ -1,8 +1,4 @@
----
-title: 链表
-date: 2021-01-10 13:06:06
-tags: algo
----
+# 链表
 
 - https://leetcode-cn.com/tag/linked-list/ 
 - recursion

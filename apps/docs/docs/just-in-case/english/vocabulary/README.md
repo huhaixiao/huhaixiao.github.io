@@ -32,6 +32,22 @@
     - n
     - 菜
 
+- provoking
+- outright
+- premise
+- rarity
+- novel
+- run of the mill
+- intrinsic 
+- in place
+- monolithic
+- arity
+- a plethora of
+- clarity 
+- boot
+- lane
+
+
 # 错题记录
 
 - ***The role of time in social life over the world.***

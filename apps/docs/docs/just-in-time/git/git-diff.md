@@ -8,4 +8,6 @@ git diff HEAD # 相当于 git diff HEAD <工作区>
 git diff HEAD~1 HEAD~0
 git diff HEAD~1 HEAD~0 --stat
 git diff <former-commit> <latter-commit> -- <file-path>
+git diff --shortstat
+git diff --name-only
 ```

@@ -90,3 +90,61 @@ cat .git/packed-refs
   - Merge pull request
   - Squash and merge
   - Rebase and merge
+
+## Glossary
+
+### object
+> The unit of storage in Git. It is uniquely identified by the `SHA-1` of its contents. Consequently, an object cannot be changed.
+
+### detached head
+> checkout an arbitrary commit that isn't necessarily the tip of any branch.
+
+### head
+> named reference to the commit at the tip of a branch. Stored in `$GIT_DIR/refs/heads`
+
+### HEAD
+> current branch
+
+### index
+> is a stored version of working tree.
+
+### working tree
+> The tree of actual checked out files. HEAD commit's tree, plus any local changes.
+
+# under the hood
+> https://medium.com/@henrmota83/understanding-git-under-the-hood-b05b1dd52dec
+
+## 生命周期
+
+### 四区
+
+1. 工作区(Working Area)
+2. 暂存区(Stage)
+3. 本地仓库(Local Repository)
+4. 远程仓库(Remote Repository)
+
+### 五状态
+
+1. 未修改(Origin)
+2. 已修改(Modified)
+3. 已暂存(Staged)
+4. 已提交(Committed)
+5. 已推送(Pushed)
+
+## Git as a database
+> `.git` folder the real repo
+
+```
+> echo "Hello world A" > A
+> git add A
+> git commit -m "Add file A"
+> echo "Hello world B" > B
+> git add B
+> git commit -m "Add file B"
+> echo "One more line for A" >> A
+> git add A
+> git commit -m "Add file A"
+> echo "One more line for B" >> B 
+> git add B
+> git commit -m "Add file B"
+```

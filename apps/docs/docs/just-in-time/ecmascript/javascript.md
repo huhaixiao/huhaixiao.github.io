@@ -1,10 +1,6 @@
----
-title: JS
-date: 2021-02-02 15:25:46
-tags: fe
----
+# JS
 
-# [Asynchronous](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
+## [Asynchronous](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous)
 
 ## [Timeouts and intervals](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals)
 

@@ -1,3 +1,0 @@
-# Element
-
-- `Element.closest(selectors)`

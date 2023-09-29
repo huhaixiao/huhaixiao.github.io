@@ -50,6 +50,7 @@ $$ x \in A \text{x属于A} $$
 
 $$ x \in A $$
 
+```html
 <dl>
     <dd>$$ x \in A $$; $$x$$属于$$A$$; $$x$$是集合$$A$$的一个元素;</dd>
   </dl>
@@ -87,6 +88,7 @@ $$ x \in A $$
     x &amp; =a+b+x
     \end{align}
   </p>
+```
 
 ## 指数
 

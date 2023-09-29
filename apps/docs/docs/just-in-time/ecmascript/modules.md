@@ -1,8 +1,10 @@
+# modules
+
 [https://webpack.js.org/concepts/modules/](https://webpack.js.org/concepts/modules/)
 
 - [What is a webpack Module](https://webpack.js.org/concepts/modules/#what-is-a-webpack-module)
     - An [ES2015 import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) statement
-    - A [CommonJS](www.commonjs.org/specs/modules/1.0/) `require()` statement
+    - A [CommonJS](https://www.commonjs.org/specs/modules/1.0/) `require()` statement
     - An AMD
 1. ES6
     1. static module

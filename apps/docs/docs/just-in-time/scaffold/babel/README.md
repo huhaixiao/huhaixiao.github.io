@@ -1,15 +1,5 @@
 # Toolling packages
 
-## @babel/core
-
-- Babel is a compiler `source code => output code`
-- Plugins run before Presets.
-- Plugin ordering is first to last.
-- Preset ordering is reversed (last to first).
-- `@babel/preset-env` 不支持 `Stage-X`
-- `@babel/preset-react`
-- `@babel/preset-typescript`
-
 # What is Babel
 [babel](https://babeljs.io/)
 > convert ECMAScript 2015+ code into a backwards compatible version

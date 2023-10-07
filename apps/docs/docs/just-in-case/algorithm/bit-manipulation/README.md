@@ -102,3 +102,14 @@ function count1(n: number): number {
 $$
 G(i)=i\oplus(i>>1)
 $$
+
+## Bitwise Operator
+
+### Invert ~
+```js
+// 0000, 0的补码
+// 1111, 所有位取反后的补码 -1
+var a = ~0 // -1
+```
+
+### [Right shift (>>)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Right_shift)

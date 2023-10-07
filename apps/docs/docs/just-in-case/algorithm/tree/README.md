@@ -1,6 +1,7 @@
 # Tree
 
 - 线段树
+- [树](https://leetcode-cn.com/tag/tree/)
 
 ## 二叉搜索树
 

@@ -1,24 +1,7 @@
-# [Getting Started](https://jestjs.io/docs/getting-started)
+# JEST
 
 ```bash
 npm install --save-dev jest
-```
-
-```js
-// sum.js
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
-```
-
-```js
-// sum.test.js
-const sum = require('./sum');
-
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
 ```
 
 ```json
@@ -72,5 +55,3 @@ module.exports = {
   transform: {},
 };
 ```
-
-# js-cookie

@@ -1,11 +1,16 @@
-> [charlesproxy](https://www.charlesproxy.com/)
+# Charles
 
-# certificate
+- https://www.charlesproxy.com/
+- map local
+- breakpoints
+- ssl proxy
+
+## certificate
 
 - 安装证书 `Help/SSL Proxying/Install Charles Root Certificate`
 - 信任证书(自定义证书默认不受信任) `钥匙串/证书/信任/使用此证书时(始终信任)`
 
-# SSL Proxying
+## SSL Proxying
 
 - `Proxy/SSL Proxying Settings`
 - `Shift + Command + l`
@@ -14,7 +19,7 @@
 
 ![设置所有host](./charles-ssl-proxying.png)
 
-# breakpoints
+## breakpoints
 
 - `Proxy/Breakpoint Settings`
 - `Shift + Command + k`

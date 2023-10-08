@@ -21,3 +21,9 @@ function containsNearbyDuplicate(nums: number[], k: number): boolean {
     return false
 };
 ```
+
+## 散列表
+
+1. 写操作
+2. 读操作
+3. hash冲突的写操作与读操作

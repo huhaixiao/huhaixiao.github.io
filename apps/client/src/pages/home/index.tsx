@@ -19,9 +19,6 @@ export const Home = () => {
             <a className="text-white" href="/core/" target="_blank">
               one
             </a>
-            <Link className="text-white" to="checklist">
-              checklist
-            </Link>
           </div>
           <Outlet />
         </ThemeContextProvider>

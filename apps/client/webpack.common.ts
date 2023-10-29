@@ -1,6 +1,5 @@
 import * as webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-// import { GenerateSW } from "workbox-webpack-plugin";
 
 const config: webpack.Configuration = {
   entry: "./src/index.tsx",
@@ -9,11 +8,6 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: "./src/index.ejs",
     }),
-    // new GenerateSW({
-    //   skipWaiting: true,
-    //   clientsClaim: true,
-    //   maximumFileSizeToCacheInBytes: 7000000
-    // })
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

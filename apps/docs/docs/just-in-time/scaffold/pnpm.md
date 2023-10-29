@@ -8,6 +8,8 @@
 
 ```shell
 pnpm add <pkg>
+pnpm remove <pkg>
+pnpm prune
 pnpm install
 pnpm <cmd>
 pnpm config set store-dir /path/to/.pnpm-store

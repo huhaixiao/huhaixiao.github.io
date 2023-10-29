@@ -3,19 +3,13 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./home/";
-import { Checklist } from "./checklist";
 
 export const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
-      children: [
-        {
-          path: "checklist",
-          element: <Checklist />
-        }
-      ]
+      children: []
     },
 
   ]);

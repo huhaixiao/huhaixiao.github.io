@@ -5,7 +5,6 @@ import React, {
   useState,
 } from "react";
 import { createGlobalStyle } from "styled-components";
-import { noop } from "lodash";
 
 interface ITheme {
   isDark: boolean;
@@ -28,7 +27,7 @@ const StyledTheme = createGlobalStyle<Pick<ITheme, "isDark">>`
 
 const ThemeContext = createContext<ITheme>({
   isDark: false,
-  setIsDark: noop,
+  setIsDark: () => {},
 });
 
 /**

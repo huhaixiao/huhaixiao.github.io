@@ -3,15 +3,20 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Home } from "./home/";
+import { Login } from "./login";
 
 export const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Home />,
-      children: []
+      children: [
+        {
+          path: "login",
+          element: <Login />,
+        },
+      ],
     },
-
   ]);
 
   return <RouterProvider router={router} />;

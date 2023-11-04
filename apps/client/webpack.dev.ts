@@ -17,7 +17,6 @@ const config: webpack.Configuration = merge(Config, {
     rules: [
       {
         test: /\.css/,
-        // exclude: /node_modules/,
         use: [
           {
             loader: "style-loader",

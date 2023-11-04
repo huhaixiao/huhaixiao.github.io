@@ -8,6 +8,14 @@ const Loading = () => {
 
 export const Home = () => {
   useLayoutEffect(() => {
+    fetch("http://localhost:80")
+      .then<{ foo: string }>((response) => response.json())
+      .then((result) => {
+        console.log({ result });
+      })
+      .catch((error) => {
+        console.log({ error });
+      });
     document.body.classList.add("bg-white", "dark:bg-black");
   }, []);
   return (

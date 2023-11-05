@@ -1,65 +1,12 @@
+# Clean Code
+
 - ***Low coupling***
 - ***High cohension***
 - ***DRY*** - Don’t Repeat Yourself
 - ***KISS*** - Keep It Simple, Stupid
 - ***YAGNI*** - You Ain’t Gonna Need It
-- 两个方法的签名一致
-    - 参数个数一致
-    - 每个参数类型一致
-    - 方法体的报错一致
-    - 返回值一致
 
-# **SOLID**
-
-- ***SRP*** - Single Responsibility Principle
-- ***OCP*** - Open Closed Principle
-- ***DIP*** - Dependence Inversion Principle
-- ***ISP*** - Interface Segregation Principle
-- ***Liskov substitution principle***
-    - Derived classes must be substitutable for their base classes - Robert.C.Marin
-    - whatever the parent can do, the descendants should at least be able to do that
-    - 子类overwrite父类方法的时候要保证签名一致
-- ***Law of Demeter***
-    - Each unit should have only limited knowledge about other units
-    - a specific case of loose coupling
-
-# Design Pattern
-
-- [https://refactoring.guru/](https://refactoring.guru/)
-
-## Creational
-
-### factory method
-
-### builder
-
-### singleton
-
-### prototype
-
-## Structural
-
-### Adapter
-
-### Decorator
-
-### Facade
-
-### Proxy
-
-## Behavioral
-
-### Mediator
-
-### Observer
-
-### Strategy
-
-### Template Method
-
-### Visitor
-
-# Mixins
+## Mixins
 
 > A mixin is an abstract subclass; i.e. a subclass definition that may be applied to different superclasses to create a related family of modified classes.
 > 
@@ -147,12 +94,6 @@ bem
 - 优秀的代码大部分是可以自描述的，好于文档和注释
 - 勤于重构
 
-# Clean Code
-
-# SOLID
-
-# OOP
-
 # Refactoring
 
 - 三大基本特性
@@ -175,37 +116,6 @@ bem
 - Avoid Premature Optimization
 
 [Refactoring and Design Patterns](https://refactoring.guru/)
-
-# Creational Pattern
-
-- Factory Method
-- Abstract Factory
-- Builder
-- Prototype
-- Singleton
-
-# Structural Pattern
-
-- Adapter
-- Bridge
-- Composite
-- Decorator
-- Facade
-- Flyweight
-- Proxy
-
-# Behavioral Pattern
-
-- Chain of Responsibility
-- Command
-- Iterator
-- Mediator
-- Memento
-- Observer
-- State
-- Strategy
-- Template Method
-- Visitor
 
 ****代码大部分时候是用来维护的，而不是用来实现功能的****
 

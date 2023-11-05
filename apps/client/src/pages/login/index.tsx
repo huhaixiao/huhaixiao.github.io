@@ -3,7 +3,7 @@ import React from "react";
 export const Login = () => {
   return (
     <form
-      className="text-white max-w-screen-sm"
+      className="text-white max-w-screen-sm m-auto"
       onSubmit={(evt: React.FormEvent<HTMLFormElement>) => {
         evt.preventDefault();
         const formData = new FormData(evt.target as HTMLFormElement);

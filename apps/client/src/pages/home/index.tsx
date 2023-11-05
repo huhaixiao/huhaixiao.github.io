@@ -22,11 +22,11 @@ export const Home = () => {
     <StrictMode>
       <Suspense fallback={<Loading />}>
         <ThemeContextProvider>
-          <div className="bg-black dark:bg-black"></div>
-          <div className="p-6 grid grid-cols-2 gap-x-2">
-            <a className="text-white" href="/core/" target="_blank">
+          <div className="grid grid-cols-12">
+            <a className="text-white m-auto block text-center" href="/core/" target="_blank">
               one
             </a>
+            <Link className="text-white" to="/login">Login</Link>
           </div>
           <Outlet />
         </ThemeContextProvider>

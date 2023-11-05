@@ -37,8 +37,9 @@
 - Separation of Concerns
 
 
-## 单一责任原则(Single Responsibility)
+## Single Responsibility
 
+- 单一责任原则
 - 封装
 - 一个类, 只有一个职责, 只有一个引起其变化的原因
 - 实现高内聚、低耦合的指导方针
@@ -48,26 +49,36 @@
   1. 隔离了数据访问代码和业务逻辑代码, 符合SRP
   2. 隔离了不通数据库实现, MySQL换Oracle只需要增加一个新的实现类, 符合OCP
 
-## 开闭原则(Open Close)
+## Open Close
 
+- 开闭原则
 - 继承
 - 一个类, 对拓展开放, 对修改关闭
 
-## 里氏替换(Liskov Substitution)
+## Liskov Substitution
 
+- 里氏替换
 - 多态
 - 基类可以出现的地方子类一定可以出现
+- Derived classes must be substitutable for their base classes - Robert.C.Marin
+- whatever the parent can do, the descendants should at least be able to do that
+- 子类overwrite父类方法的时候要保证签名一致
 
-## 接口隔离(Interface Segregation)
+## Interface Segregation
 
+- 接口隔离
 - 不应该出现的接口不应该出现
 - 接口应该足够小
 - 实现类不应该依赖其不需要的接口; 因为对于接口中出现的方法, 不管对类有用或者无用, 类都要去实现它
 
-## 依赖注入(Dependency Inversion)
+## Dependency Inversion 
 
+- 依赖注入
 - 控制反转 - Inversion Of Control
   - 高层模块不要依赖低层模块, 抽象不依赖实现
 - 依赖注入是控制反转的实现
 
-## 迪米特法则(最少知道原则)
+## Law of Demeter
+
+- Each unit should have only limited knowledge about other units
+- a specific case of loose coupling

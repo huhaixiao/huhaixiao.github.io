@@ -1,6 +1,6 @@
 # Ruby
 
-- [ ]Gemfiles
+- Gemfiles
 - Gem 是 Ruby 中的包，依照 .gemspec 构建
 - .gemspec 文件包含Gem 有关信息，版本号，作者，联系方式，依赖等
 

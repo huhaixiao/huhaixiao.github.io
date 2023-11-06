@@ -1,15 +1,15 @@
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+# Closure
 
-/**
- * A closure is the combination of a function bundled together (enclosed) 
- * with references to its surrounding state (the lexical environment).
- * 
- * a closure gives you access to an outer function’s scope from an inner function.
- * 
- * closures are created every time a function is created, at function creation time.
- */
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
-// Practical closures
+A closure is the combination of a function bundled together (enclosed) 
+with references to its surrounding state (the lexical environment).
+a closure gives you access to an outer function’s scope from an inner function.
+closures are created every time a function is created, at function creation time.
+
+## Practical closures
+
+```js
 function makeSizer(size) {
   return function() {
     document.body.style.fontSize = size + 'px';
@@ -23,8 +23,11 @@ var size16 = makeSizer(16);
 document.getElementById('size-12').onclick = size12;
 document.getElementById('size-14').onclick = size14;
 document.getElementById('size-16').onclick = size16;
+```
 
-// Emulating private methods with closures
+## Emulating private methods with closures
+
+```js
 var counter = (function() {
   var privateCounter = 0;
   function changeBy(val) {
@@ -51,13 +54,15 @@ console.log(counter.value());  // 0.
 counter.increment();
 counter.increment();
 console.log(counter.value());  // 2.
+```
 
-/**
- * Closure Scope Chain
- * - Local Scope (Own scope)
- * - Outer Functions Scope
- * - Global Scope
- */
+## Closure Scope Chain
+
+- Local Scope (Own scope)
+- Outer Functions Scope
+- Global Scope
+
+```js
 var e = 10;
 function sum(a){
   return function(b){
@@ -72,11 +77,11 @@ function sum(a){
 }
 
 console.log(sum(1)(2)(3)(4)); // log 20
+```
 
-/**
- * Creating closures in loops: A common mistake
- */
+## Creating closures in loops: A common mistake
 
+```js
 //  mistake
 for (var i = 0; i < helpText.length; i++) {
   var item = helpText[i];
@@ -115,3 +120,4 @@ helpText.forEach(function(text) {
     showHelp(text.help);
   }
 });
+```

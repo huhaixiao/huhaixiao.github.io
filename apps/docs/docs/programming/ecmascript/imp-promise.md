@@ -1,3 +1,6 @@
+# Imp Promise
+
+```js
 // https://www.promisejs.org/implementing/
 
 var PENDING = 0
@@ -65,3 +68,4 @@ function doResolve(fn, onFulfilled, onRejected) {
     onRejected(e)
   }
 }
+```

@@ -2,7 +2,7 @@ import React, { StrictMode, Suspense, useLayoutEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { ThemeContextProvider } from "../../hooks/theme";
 
-const Loading = () => {
+const Loading = () => {g
   return <span>loading...</span>;
 };
 
@@ -16,17 +16,23 @@ export const Home = () => {
       .catch((error) => {
         console.log({ error });
       });
-    document.body.classList.add("bg-white", "dark:bg-black");
+    // document.body.classList.add("bg-white", "dark:bg-black");
   }, []);
   return (
     <StrictMode>
       <Suspense fallback={<Loading />}>
         <ThemeContextProvider>
           <div className="grid grid-cols-12">
-            <a className="text-white m-auto block text-center" href="/core/" target="_blank">
+            <a
+              className="text-white m-auto block text-center"
+              href="/core/"
+              target="_blank"
+            >
               one
             </a>
-            <Link className="text-white" to="/login">Login</Link>
+            <Link className="text-white" to="/login">
+              Login
+            </Link>
           </div>
           <Outlet />
         </ThemeContextProvider>

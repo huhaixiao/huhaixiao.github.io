@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import multer from 'multer';
 
 const app = express();
-const port = 80;
+const port = 8888;
 const upload = multer();
 
 app.use(bodyParser.json());

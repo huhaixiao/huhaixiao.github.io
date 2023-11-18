@@ -21,6 +21,7 @@ app.all('*', function (req, res, next) {
 });
 
 app.get("/", function (req, res) {
+  console.log('123')
   res.header('Content-Type', 'application/json')
   res.send({foo: 'bar'});
 });

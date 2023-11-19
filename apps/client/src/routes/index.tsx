@@ -33,7 +33,7 @@ export const App = () => {
           borderRadius: 2,
 
           // 派生变量，影响范围小
-          colorBgContainer: "#f6ffed",
+          colorBgContainer: "black",
         },
       }}
     >

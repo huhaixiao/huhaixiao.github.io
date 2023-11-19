@@ -1,14 +1,27 @@
 import React, { StrictMode, Suspense, useLayoutEffect } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { ThemeContextProvider } from "../../hooks/theme";
+import { createGlobalStyle } from "styled-components";
+import { Link } from '../../components';
 
-const Loading = () => {g
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: black;
+  }
+`;
+
+const Loading = () => {
   return <span>loading...</span>;
 };
 
 export const Home = () => {
   useLayoutEffect(() => {
-    fetch("http://localhost:80")
+    fetch("http://101.43.180.155:8888")
       .then<{ foo: string }>((response) => response.json())
       .then((result) => {
         console.log({ result });
@@ -16,27 +29,29 @@ export const Home = () => {
       .catch((error) => {
         console.log({ error });
       });
-    // document.body.classList.add("bg-white", "dark:bg-black");
   }, []);
   return (
-    <StrictMode>
-      <Suspense fallback={<Loading />}>
-        <ThemeContextProvider>
-          <div className="grid grid-cols-12">
-            <a
-              className="text-white m-auto block text-center"
-              href="/core/"
-              target="_blank"
-            >
-              one
-            </a>
-            <Link className="text-white" to="/login">
-              Login
-            </Link>
-          </div>
-          <Outlet />
-        </ThemeContextProvider>
-      </Suspense>
-    </StrictMode>
+    <>
+      <GlobalStyle />
+      <StrictMode>
+        <Suspense fallback={<Loading />}>
+          <ThemeContextProvider>
+            <div className="grid grid-cols-12">
+              <Link
+                className="text-white m-auto block text-center"
+                href="/core/"
+                target="_blank"
+              >
+                one
+              </Link>
+              <Link className="text-white" to="/login">
+                Login
+              </Link>
+            </div>
+            <Outlet />
+          </ThemeContextProvider>
+        </Suspense>
+      </StrictMode>
+    </>
   );
 };

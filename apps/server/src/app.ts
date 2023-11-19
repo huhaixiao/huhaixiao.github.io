@@ -20,6 +20,10 @@ app.all('*', function (req, res, next) {
   next();
 });
 
+// app.get("/api", function(req, res) => {
+
+// })
+
 app.get("/", function (req, res) {
   console.log('123')
   res.header('Content-Type', 'application/json')
@@ -42,5 +46,6 @@ app.delete("/user", (req, res) => {
   res.send("Got a DELETE request at /user");
 });
 
-
-app.listen(port);
+app.listen(port, () => {
+  console.log('listen on port', port)
+});

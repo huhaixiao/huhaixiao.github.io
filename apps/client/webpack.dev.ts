@@ -5,10 +5,15 @@ import { merge } from "webpack-merge";
 import Config from "./webpack.common";
 // in case you run into any typescript error when configuring `devServer`
 import "webpack-dev-server";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = merge(Config, {
   mode: "development",
+  devtool: "source-map",
   plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.dev.ejs",
+    }),
     new ReactRefreshPlugin({
       overlay: true,
     }),

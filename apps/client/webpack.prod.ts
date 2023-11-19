@@ -3,13 +3,17 @@ import * as webpack from "webpack";
 import { merge } from "webpack-merge";
 import CopyPlugin from "copy-webpack-plugin";
 import Config from "./webpack.common";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: webpack.Configuration = merge(Config, {
   mode: "production",
   plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/index.prod.ejs",
+    }),
     new CopyPlugin({
       patterns: [
-        { from: "public", to: "" },
+        // { from: "public", to: "" },
         { from: ".github", to: ".github" },
       ],
       options: {
@@ -21,6 +25,7 @@ const config: webpack.Configuration = merge(Config, {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash:8].js",
     chunkFilename: "[name].[chunkhash:8].js",
+    clean: true,
   },
   module: {
     rules: [

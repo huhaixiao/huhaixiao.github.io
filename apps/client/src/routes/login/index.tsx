@@ -1,5 +1,7 @@
 import React from "react";
 import { ProForm, ProFormText } from "@ant-design/pro-components";
+import {Button} from 'antd';
+import styled from 'styled-components';
 
 export const Login = () => {
   return (
@@ -9,6 +11,7 @@ export const Login = () => {
       }}
     >
       <ProFormText name="name" label="姓名" />
+      {/* <Button>Submit</Button> */}
     </ProForm>
   );
   // return (
